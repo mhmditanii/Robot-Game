@@ -33,12 +33,14 @@ shared_ptr<MainRobot> BattleGround::robotInit(int id, string name, size_t  row,s
             return static_pointer_cast<ShootingRobot>(temp1);
         }
             //return make_shared<BlueThunder>(2,"s",2,2);
-        case 20:
+        case 20: {
             auto temp2 = make_shared<Robocop>(id,name,row,column);
             return static_pointer_cast<MovingRobot>(temp2);
-        case 30:
+        }
+        case 30: {
             auto temp3 = make_shared<Terminator>(id,name,row,column);
             return static_pointer_cast<SeeingRobot>(temp3);
+        }
         default: {
             assert("Can not init robot / ERROR BATTLEGROUND_UTIL.cpp");
             return nullptr;
@@ -48,18 +50,20 @@ shared_ptr<MainRobot> BattleGround::robotInit(int id, string name, size_t  row,s
 shared_ptr<MainRobot> BattleGround::provideVision(size_t const x,size_t const y, int const scope) {
     // Define the range of the vision based on scope
     size_t half_scope = scope / 2;
-    int x_start = max(0, static_cast<int>(x) - static_cast<int>(half_scope));
-    //int x_end = min(static_cast<int>(matrix.size() - 1), static_cast<int>(x) + static_cast<int>(half_scope));
-    int y_start = max(0, static_cast<int>(y) - static_cast<int>(half_scope));
-    //int y_end = min(static_cast<int>(matrix[0].size() - 1), static_cast<int>(y) + static_cast<int>(half_scope));
+    size_t x_start = max<size_t>(0, x - half_scope);
+    size_t x_end = min<size_t>(matrix->getRows() - 1, x + half_scope);
+    size_t y_start = max<size_t>(0, y - half_scope);
+    size_t y_end = min<size_t>(matrix->getColumns() - 1, y + half_scope);
 
-    // Check for robots in the visible range
-    // for (int i = x_start; i <= x_end; ++i) {
-    //     for (int j = y_start; j <= y_end; ++j) {
-    //         // Add the cell to the visible cells vector
-    //         visible_cells.push_back(matrix[i][j]);
-    //     }
-    // }
+
+    //Check for robots in the visible range
+    for (int i = x_start; i <= x_end; ++i) {
+        for (int j = y_start; j <= y_end; ++j) {
+            if (matrix->access(i,j) != 0) {
+                return matrix->access(i,j);
+            };
+        }
+    }
 
     return nullptr;
 }

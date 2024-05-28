@@ -3,16 +3,16 @@
 //
 #include<iostream>
 #include<memory>
-//#include"Data_structures/svector.h"
+#include"Data_structures/svector.h"
 //#include "sub_robots_h/BlueThunder.h"
-//#include "sub_robots_h/Robocop.h"
+// #include "sub_robots_h/Robocop.h"
 #include "sub_robots_h/BlueThunder.h"
-#include "sub_robots_h/Robocop.h"
-#include "sub_robots_h/Terminator.h"
+//#include "sub_robots_h/Terminator.h"
 int main() {
-    shared_ptr<Robocop> x = make_shared<Robocop>(1,"Ahmad",2,2);
+    svector<MainRobot*> r(3,3,nullptr);
+    shared_ptr<BlueThunder> x = make_shared<BlueThunder>(1,"Ahmad",2,2);
     shared_ptr<MainRobot> s = x;
-    x = nullptr;
-    s->executeTurn();
+    r.setData(2,2,s.get());
+    r.print();
     return 0;
 }

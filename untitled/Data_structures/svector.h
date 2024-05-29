@@ -6,7 +6,10 @@
 #define SELF_VECTOR_H
 #include<iostream>
 #include<cassert>
-#include"../robots_h/MainRobot.h"
+#include<memory>
+
+#include "../robots_h/MainRobot.h"
+
 
 template<typename T>
 class svector {
@@ -19,21 +22,21 @@ public:
     //REAL FUNCTIONS
     svector(size_t rows, size_t columns, T init);
     ~svector();
-    // T access(size_t x, size_t y);
-    // void setVal(size_t x, size_t y, T val);
-    // bool isBoundValid(size_t x, size_t y);
-    // size_t getRows();
-    // size_t getColumns();
+    T access(size_t x, size_t y);
+    void setVal(size_t x, size_t y, T val);
+    bool isBoundValid(size_t x, size_t y);
+    size_t getRows();
+    size_t getColumns();
     //TEST FUNCTIONS
-    // void print();
+    void print();
 };
 
 template<typename T>
 class svector<T*> {
 private:
+    T** data;
     size_t rows;
     size_t columns;
-    T** data;
 public:
     svector(size_t const rows, size_t const columns, T* init);
     ~svector();

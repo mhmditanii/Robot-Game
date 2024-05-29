@@ -9,7 +9,7 @@ BattleGround::BattleGround(size_t const x, size_t const y , int const robotsnumb
     :stepCount(stepcount)
 {
     matrix = new svector<size_t>(x,y,0);
-    activeRobots = new svector<shared_ptr<MainRobot>>(1,robotsnumber,nullptr);
+    activeRobots = new svector<MainRobot*>(1,robotsnumber,nullptr);
 }
 void BattleGround::robotCreate(int const robotsNumber,int const id, string name, size_t const row, size_t const column ) {
     for(int i = 0 ; i < robotsNumber;i++) {
@@ -20,9 +20,11 @@ void BattleGround::robotCreate(int const robotsNumber,int const id, string name,
 bool BattleGround::isOccupied(size_t const x, size_t const y) {
     return matrix->access(x,y) != -0;
 }
+
 void BattleGround::incSimulation() {
     stepCount++;
 }
+
 void BattleGround::robotMove() {
 
 }
@@ -32,7 +34,6 @@ shared_ptr<MainRobot> BattleGround::robotInit(int id, string name, size_t  row,s
             auto temp1 = make_shared<BlueThunder>(id,name,row,column);
             return static_pointer_cast<ShootingRobot>(temp1);
         }
-            //return make_shared<BlueThunder>(2,"s",2,2);
         case 20: {
             auto temp2 = make_shared<Robocop>(id,name,row,column);
             return static_pointer_cast<MovingRobot>(temp2);
@@ -41,10 +42,11 @@ shared_ptr<MainRobot> BattleGround::robotInit(int id, string name, size_t  row,s
             auto temp3 = make_shared<Terminator>(id,name,row,column);
             return static_pointer_cast<SeeingRobot>(temp3);
         }
+        //default for unit testing
         default: {
-            assert("Can not init robot / ERROR BATTLEGROUND_UTIL.cpp");
-            return nullptr;
-        }  //Unit testing
+            assert(0,"Can not init robot / ERROR BATTLEGROUND_UTIL.cpp");
+            return nullptr; //return for ompilation purposes (not reached)
+        }
     }
 }
 shared_ptr<MainRobot> BattleGround::provideVision(size_t const x,size_t const y, int const scope) {
@@ -56,14 +58,14 @@ shared_ptr<MainRobot> BattleGround::provideVision(size_t const x,size_t const y,
     size_t y_end = min<size_t>(matrix->getColumns() - 1, y + half_scope);
 
 
-    //Check for robots in the visible range
-    for (int i = x_start; i <= x_end; ++i) {
-        for (int j = y_start; j <= y_end; ++j) {
-            if (matrix->access(i,j) != 0) {
-                return matrix->access(i,j);
-            };
-        }
-    }
+    ////Check for robots in the visible range
+    // for (int i = x_start; i <= x_end; ++i) {
+    //     for (int j = y_start; j <= y_end; ++j) {
+    //         if (matrix->access(i,j) != 0) {
+    //             return matrix->access(i,j);
+    //         };
+    //     }
+    // }
 
     return nullptr;
 }

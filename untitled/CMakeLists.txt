@@ -37,4 +37,6 @@ add_executable(untitled
         Data_structures/Squeue.h
         Handlers/Robots_unifier.h
         interface/interfaces.h
+        Data_structures/svector_robot_ptr.cpp
+        Data_structures/svector_robot_ptr.h
 )

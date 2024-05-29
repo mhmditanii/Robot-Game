@@ -24,10 +24,11 @@ class BattleGround {
 private:
     int stepCount;
     // svector<size_t>* matrix;
-    svector<shared_ptr<MainRobot>>* activeRobots;
-    //queue* for queue robots
-public:
     svector<size_t>* matrix;
+    svector<MainRobot*>* activeRobots;
+
+public:
+
     BattleGround(size_t x, size_t y , int robotsnumber,int stepcount);
 
     // BATTLEGROUND CONTROL

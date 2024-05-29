@@ -22,7 +22,7 @@ svector<T>::~svector() {
 
 template<typename T>
 T svector<T>::access(size_t const x, size_t const y) {
-        // return data[x * columns + y];
+         return data[x * columns + y];
 }
 
 template<typename T>

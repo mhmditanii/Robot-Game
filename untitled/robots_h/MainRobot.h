@@ -17,12 +17,16 @@ private:
     int lives = 3;
     int attempts = 3;
     size_t rowLoc; size_t columnLoc;  // location of the robot
-protected:
-    //BattleGround* BGptr;  //used to gain access to the battlefield functions like gain vision and check boundaries
+
 public:
     //MainRobot(int id,BattleGround* BGptr,string name, size_t row, size_t column);
     void loselife();
     void respawn();
+
+    //Setters and Getters
+    size_t getRowLoc() const;
+    size_t getColumnLoc() const;
+    void setLoc(size_t row, size_t col); // Set the loc in one go no need for 2 setters
 
     //ROBOTS FUNCTIONS
     virtual bool executeTurn() = 0; // Every robot will implement this function base on his abilities

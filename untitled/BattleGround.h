@@ -19,27 +19,27 @@
 #include "sub_robots_h/BlueThunder.h"
 #include "sub_robots_h/Robocop.h"
 #include "sub_robots_h/Terminator.h"
+#include "Data_structures/svector_robot_ptr.h"
+
 
 class BattleGround {
 private:
     int stepCount;
     // svector<size_t>* matrix;
-    svector<size_t>* matrix;
-    svector<MainRobot*>* activeRobots;
+    svector<MainRobot*>* matrix;    //using svector_robot_ptr to build
+                                    //a matrix of pointers
 
 public:
 
-    BattleGround(size_t x, size_t y , int robotsnumber,int stepcount);
+    BattleGround(size_t x, size_t y , int stepcount);
 
     // BATTLEGROUND CONTROL
     bool isOccupied(size_t x, size_t y);
     void incSimulation();
-    shared_ptr<MainRobot> provideVision(size_t row,size_t column,int scope);
+    MainRobot* provideVision(size_t row,size_t column,int scope) const;
 
     // ROBOT Handling
-    void robotCreate(int robotsNumber,int id,string name,size_t row,size_t column);
-    void robotMove();
-     shared_ptr<MainRobot> robotInit(int id, string name, size_t row,size_t column);
+    void robotInit(int id, string name, size_t row,size_t column);
 };
 
 

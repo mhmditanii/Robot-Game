@@ -8,7 +8,7 @@
 // #include "sub_robots_h/Robocop.h"
 #include "sub_robots_h/BlueThunder.h"
 //#include "sub_robots_h/Terminator.h"
+#include"Data_structures/svector_robot_ptr.h"
 int main() {
-    svector<MainRobot*> r(3,3,nullptr);
     return 0;
 }

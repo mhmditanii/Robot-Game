@@ -3,6 +3,8 @@
 //
 #include "../robots_h/MainRobot.h"
 
+#include "../BattleGround.h"
+
 MainRobot::MainRobot(int id, string name, size_t const row, size_t const column) {
     this->name = name;
     this->rowLoc = row;
@@ -10,13 +12,8 @@ MainRobot::MainRobot(int id, string name, size_t const row, size_t const column)
     this->id = -1;
     cout <<"Construced Main" << endl;
 }
-void MainRobot::loselife() {
-    lives--;
-    if(lives == 0) {
-       //delete the robot from the battleground and add him to the back of the queue
-   }
-}
-void MainRobot::respawn() {
+
+void MainRobot::upgradeRobot() {
 
 }
 
@@ -35,6 +32,25 @@ void MainRobot::setLoc(size_t const row,size_t const col) {
     columnLoc = col;
 }
 
+void MainRobot::decrementLife() {
+    this->lives = this->lives - 1;
+}
+
+int MainRobot::getLife() const {
+    return this->lives;
+}
+
+
+//              *********ROBOT ATTRIBUTES CONTROL************
+
+void MainRobot::incKillScore() {
+    //Increment while checking if MAX SCORE to upgrade was attained
+    if(++killScore==3) {
+
+    }
+}
+
+
 //TESTING
 
 MainRobot::~MainRobot() {
@@ -43,4 +59,9 @@ MainRobot::~MainRobot() {
 
 void MainRobot::printlife() {
     cout << lives << endl;
+}
+
+void MainRobot::checkBG() {
+    BGptr->isOccupied(2,2);
+    cout << "USED BGPTR" << endl;
 }

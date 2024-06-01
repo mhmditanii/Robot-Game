@@ -6,9 +6,9 @@
 #define MAINROBOT_H
 #include<iostream>
 #include<cassert>
-//#include "../BattleGround.h"
 
 using namespace std;
+class BattleGround;
 
 class MainRobot {
 private:
@@ -16,26 +16,38 @@ private:
     string name;
     int lives = 3;
     int attempts = 3;
+    int killScore = 0;
     size_t rowLoc; size_t columnLoc;  // location of the robot
-
+    BattleGround* BGptr;
 public:
-    //MainRobot(int id,BattleGround* BGptr,string name, size_t row, size_t column);
-    void loselife();
-    void respawn();
 
-    //Setters and Getters
+
+    //Setters and Getters (DEC , INC included)
     size_t getRowLoc() const;
     size_t getColumnLoc() const;
     void setLoc(size_t row, size_t col); // Set the loc in one go no need for 2 setters
 
-    //ROBOTS FUNCTIONS
+    void decrementLife();
+    int getLife() const;
+
+
+    //ROBOTS ATTRIBUTE CONTROL
     virtual bool executeTurn() = 0; // Every robot will implement this function base on his abilities
                                     // and will return true if a kill was secured (for upgrade purposes)
 
+    //killRobot uses addToQueue (to try and implement one change for one function)
+
+
+    void incKillScore();
+    void upgradeRobot();
+
+
     //TESTING
     MainRobot(int id,string name, size_t row, size_t column);
+    MainRobot(int id,string name, size_t row, size_t column,BattleGround* BGptr);
     virtual ~MainRobot();
     void printlife();
+    void checkBG();
 };
 
 

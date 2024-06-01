@@ -4,11 +4,11 @@
 
 #include "../sub_robots_h/Robocop.h"
 
-Robocop::Robocop(int id, string name, size_t row, size_t column)
-    :   MainRobot(id,name,row,column),
-        MovingRobot(id,name,row,column),
-        SeeingRobot(id,name,row,column),
-        ShootingRobot(id,name,row,column)
+Robocop::Robocop(int id, string name, size_t row, size_t column, BattleGround* BGptr)
+    :   MainRobot(id,name,row,column, BGptr),
+        MovingRobot(id,name,row,column,BGptr),
+        SeeingRobot(id,name,row,column,BGptr),
+        ShootingRobot(id,name,row,column,BGptr)
 {
     cout << "Creating Robocop" << endl;
 }

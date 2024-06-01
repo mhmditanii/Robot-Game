@@ -11,10 +11,11 @@
 class Terminator : public SeeingRobot, public MovingRobot{
 private:
 public:
-    Terminator(int id, string name, size_t row, size_t column);
+    Terminator(int id, string name, size_t row, size_t column, BattleGround* BGptr);
     ~Terminator();
     bool look() override;
     void move() override;
+    bool executeTurn() override;
 };
 
 

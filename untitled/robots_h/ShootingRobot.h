@@ -4,15 +4,15 @@
 
 #ifndef SHOOTINGROBOT_H
 #define SHOOTINGROBOT_H
+
 #include"MainRobot.h"
 
-
-class ShootingRobot : public virtual MainRobot{
+class ShootingRobot : public virtual  MainRobot{
 private:
 
 public:
-    ShootingRobot(int id,string name, size_t row, size_t column);
-    ~ShootingRobot() override;
+    ShootingRobot(int id,string name, size_t row, size_t column, BattleGround* BGptr);
+    ~ShootingRobot();
 
     virtual bool shoot() = 0;
 };

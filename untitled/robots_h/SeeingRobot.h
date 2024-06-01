@@ -11,7 +11,7 @@ class SeeingRobot : public virtual MainRobot{
 private:
 
 public:
-    SeeingRobot(int id,string name, size_t row, size_t column);
+    SeeingRobot(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~SeeingRobot();
     virtual bool look() = 0;
 };

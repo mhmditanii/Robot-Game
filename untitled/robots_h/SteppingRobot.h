@@ -11,7 +11,7 @@ class SteppingRobot : public MainRobot{
 private:
 
 public:
-    SteppingRobot(int id,string name, size_t row, size_t column);
+    SteppingRobot(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~SteppingRobot();
     virtual bool step() = 0;
 };

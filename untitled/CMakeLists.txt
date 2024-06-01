@@ -33,10 +33,9 @@ add_executable(untitled
         upgraded_robots_c/UltimateRobot.cpp
         upgraded_robots_h/UltimateRobot.h
         test.cpp
-        Data_structures/Squeue.cpp
-        Data_structures/Squeue.h
         Handlers/Robots_unifier.h
-        interface/interfaces.h
         Data_structures/svector_robot_ptr.cpp
         Data_structures/svector_robot_ptr.h
+        Data_structures/linked_list.cpp
+        Data_structures/linked_list.h
 )

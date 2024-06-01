@@ -4,8 +4,8 @@
 
 #include "../robots_h/ShootingRobot.h"
 
-ShootingRobot::ShootingRobot(int id, string name, size_t row, size_t column)
-    : MainRobot(id,name,row,column)
+ShootingRobot::ShootingRobot(int id, string name, size_t row, size_t column, BattleGround* BGptr)
+    : MainRobot(id,name,row,column,BGptr)
 {
     cout << "Shooting robot calling main" << endl;
 }

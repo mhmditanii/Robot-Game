@@ -9,11 +9,18 @@
 
 class BlueThunder : public ShootingRobot{
 private:
+    int clockTurn = 12;
 public:
-    BlueThunder(int id,string name, size_t row, size_t column);
+    BlueThunder(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~BlueThunder() override;
     bool shoot() override;
-    bool executeTurn() override;;
+    bool executeTurn() override;
+
+    //Shooting functions to keep each function to do one task
+    size_t aimUp() const;
+    size_t aimRight() const;
+    size_t aimDown() const;
+    size_t aimLeft() const;
 };
 
 

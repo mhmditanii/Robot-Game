@@ -11,7 +11,7 @@ class MovingRobot : public virtual MainRobot{
 private:
 
 public:
-    MovingRobot(int id, string name, size_t row, size_t column);
+    MovingRobot(int id, string name, size_t row, size_t column, BattleGround* BGptr);
     ~MovingRobot();
     void moveUp();
     void moveDown();

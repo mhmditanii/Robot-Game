@@ -10,7 +10,7 @@
 class Robocop : public MovingRobot, public SeeingRobot, public ShootingRobot {
 private:
 public:
-    Robocop(int id,string name, size_t row, size_t column);
+    Robocop(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~Robocop() override;
     void move() override;
     bool look() override;

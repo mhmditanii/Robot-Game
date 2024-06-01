@@ -1,11 +1,11 @@
 //
-// Created by mhmd on 5/18/24.
+// Created by mhmd on 5/18/24.w
 //
 
 #include "../robots_h/MovingRobot.h"
 
-MovingRobot::MovingRobot(int id, string name, size_t row, size_t column)
-    : MainRobot(id,name,row,column)
+MovingRobot::MovingRobot(int id, string name, size_t row, size_t column, BattleGround* BGptr)
+    : MainRobot(id,name,row,column, BGptr)
 {
     cout << "MOVING ROBOT USING MAIN" << endl;
 }

@@ -24,5 +24,9 @@ int main() {
         r->robotInit(10,"player 2",1,0);
 
         cout << "CREATED THE ROBOTS" << endl;
+
+        cout << "DELETING ROBOT" << endl;
+        r->robotDelete(1,0);
+        cout << "DELETED THE ROBOT" << endl;
         return 0;
 }

@@ -26,7 +26,7 @@ T* svector<T *>::getData(size_t const row, size_t const column) const {
 
 template<typename T>
 void svector<T *>::setData(size_t const row, size_t const column, T* const value){
-    if(!isInBounds(row,column)){assert(0 && "OUT OF BOUND SET VECTOR");}
+    //if(!isInBounds(row,column)){assert(0 && "OUT OF BOUND SET VECTOR");}
     data[row * columns + column] = value;
 }
 
@@ -42,7 +42,7 @@ void svector<T*>::print() {
 }
 
 template<typename T>
-bool svector<T *>::isInBounds(size_t row, size_t column) {
+bool svector<T *>::isInBounds(size_t row, size_t column) const {
         return row < rows && column < columns;
 }
 
@@ -52,9 +52,9 @@ bool svector<T *>::isInBounds(size_t row, size_t column) {
 
 
 svector<shared_ptr<MainRobot>>::svector(size_t const row, size_t const column) : BGrows(row), BGcolumns(column) {
-    robots = new MainRobot * [BGrows * BGcolumns];
+    robots = std::shared_ptr<std::shared_ptr<MainRobot>[]>(new std::shared_ptr<MainRobot>[BGrows * BGcolumns]);
     for (size_t i = 0; i < BGrows * BGcolumns; i++) {
-        robots[i] = nullptr;
+        robots[static_cast<int>(i)] = nullptr;
     }
 }
 svector<shared_ptr<MainRobot>>::~svector() {
@@ -74,32 +74,25 @@ size_t svector<shared_ptr<MainRobot>>::getColumns() const {
     return BGcolumns;
 }
 
-MainRobot* svector<shared_ptr<MainRobot>>::getRobot(size_t const row, size_t const column) const {
-    if(isInBounds(row,column)) assert(false && "ACCESSING OUT OF BOUDNS IN SVECTOR_robot_ptr");
-    return robots[row * BGcolumns + column];
+shared_ptr<MainRobot> svector<shared_ptr<MainRobot>>::getRobot(size_t const row, size_t const column) const {
+    //if(isInBounds(row,column)) assert(false && "ACCESSING OUT OF BOUDNS IN SVECTOR_robot_ptr");
+    const int temp = static_cast<int>(row * BGcolumns + column);
+    return robots[temp];
 }
-void svector<shared_ptr<MainRobot>>::setRobot(size_t const row, size_t const column, shared_ptr<MainRobot> robot) {
-    robots[row * BGcolumns + column] = robot;
+void svector<shared_ptr<MainRobot>>::setRobot(size_t const row, size_t const column, shared_ptr<MainRobot>& robot) {
+    const int temp = static_cast<int>(row * BGcolumns + column);
+    robots[temp] = robot;
 }
 
 
 
 //                  *********** TESTING/CHECKING FUNCTIONS **************
 
-
-bool svector<shared_ptr<MainRobot>>::isInBounds(size_t const row, size_t column) const {
-    return row < BGrows && column < BGcolumns;
+void svector<shared_ptr<MainRobot> >::deleteData(size_t const row, size_t const column) {
+    const int temp = static_cast<int>(row * BGcolumns + column);
+    robots[temp] = nullptr;
 }
 
-
-
-//DELETED FUNCTIONS MAY BE RE-USED
-
-
-// svector<MainRobot*>::svector(size_t const column, MainRobot* init)
-//     : columns(column) {
-//     robots = new MainRobot * [rows * column];
-//     for (size_t i = 0; i < rows * column; i++) {
-//         robots[i] = init;
-//     }
-// }
+bool svector<shared_ptr<MainRobot>>::isInBounds(size_t const row, size_t const column) const {
+    return row < BGrows && column < BGcolumns;
+}

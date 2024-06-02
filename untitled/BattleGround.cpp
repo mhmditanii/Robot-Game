@@ -11,20 +11,10 @@ BattleGround::BattleGround(size_t const x, size_t const y ,int const stepcount)
     matrix = new svector<shared_ptr<MainRobot>>(x,y);
 }
 
-BattleGround::~BattleGround() {
-    cout << "STARTED THE DELETE PROCESS" << endl;
-    for(int i = 0; i < matrix->getRows();i++) {
-        for(int j = 0; j < matrix->getColumns();j++) {
-            if(matrix->getRobot(i,j)!= nullptr) {
-                delete matrix->getRobot(i,j);
-                cout << "ROBOT FOUND IN DESTRUCTOR AND WAS DELETED" << endl;
-            }
-        }
-    }
-}
+BattleGround::~BattleGround() = default;
 
 
-bool BattleGround::isOccupied(size_t const x, size_t const y) {
+bool BattleGround::isOccupied(size_t const x, size_t const y) const {
     return matrix->getRobot(x,y) != nullptr;
 }
 
@@ -86,10 +76,16 @@ bool BattleGround::getVision(size_t const row,size_t const col, int const scope)
     return false;
 }
 
-MainRobot* BattleGround::getRobot(size_t const row, size_t const column) const {
+shared_ptr<MainRobot> BattleGround::getRobot(size_t const row, size_t const column) const {
     return matrix->getRobot(row,column);
 }
 
+
+//     ************************************************************************
+
+void BattleGround::robotDelete(size_t const row, size_t const column) const {
+    matrix->deleteData(row,column);
+}
 
 
 

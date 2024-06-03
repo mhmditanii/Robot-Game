@@ -17,19 +17,19 @@ bool BlueThunder::shoot() {
     switch(clockTurn) {
         case 12: {
             this->clockTurn = 3;
-            return true;
+            return this->attack(aimUp(), getColumnLoc());
         }
         case 3: {
             this->clockTurn = 6;
-            return true;
+            return this->attack(getRowLoc(),aimRight());
         }
         case 6: {
             this->clockTurn = 9;
-            return true;
+            return this->attack(aimDown(),getColumnLoc());
         }
         case 9: {
             this->clockTurn = 12;
-            return true;
+            return this->attack(getRowLoc(),aimLeft());
         }
         default: {
             //assert(0,"BLUE THUNDER SHOOT / ERROR AIMING");
@@ -39,8 +39,8 @@ bool BlueThunder::shoot() {
     return true;
 }
 
-bool BlueThunder::executeTurn() {
-    return true;
+void BlueThunder::executeTurn() {
+     this->shoot();
 }
 
 

@@ -32,7 +32,7 @@ public:
 
 
     //ROBOTS ATTRIBUTE CONTROL
-    virtual bool executeTurn() = 0; // Every robot will implement this function base on his abilities
+    virtual void executeTurn() = 0; // Every robot will implement this function base on his abilities
                                     // and will return true if a kill was secured (for upgrade purposes)
 
     //killRobot uses addToQueue (to try and implement one change for one function)
@@ -47,7 +47,9 @@ public:
     MainRobot(int id,string name, size_t row, size_t column,BattleGround* BGptr);
     virtual ~MainRobot();
     void printlife();
-    void checkBG();
+    bool checkBG(size_t row, size_t column) const;
+    MainRobot(const MainRobot& other);
+    bool attack(size_t row, size_t column);
 };
 
 

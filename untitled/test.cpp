@@ -22,8 +22,10 @@ int main() {
         // shared_ptr<ShootingRobot> temp = make_shared<BlueThunder>(10,"ahmad",3,3);
         r->robotInit(10,"ahmad",2,0);
         r->robotInit(10,"player 2",1,0);
-
-        cout << "CREATED THE ROBOTS" << endl;
+        shared_ptr<MainRobot> temp = r->getRobot(2,0);
+        cout << "TRYING THE ATTACK " << endl;
+        temp->executeTurn();
+        cout<<"END OF ATTACK" << endl;
 
         cout << "DELETING ROBOT" << endl;
         r->robotDelete(1,0);

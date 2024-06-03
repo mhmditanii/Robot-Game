@@ -15,7 +15,7 @@ public:
     ~Terminator();
     bool look() override;
     void move() override;
-    bool executeTurn() override;
+    void executeTurn() override;
 };
 
 

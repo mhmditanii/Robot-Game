@@ -14,7 +14,7 @@ public:
     BlueThunder(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~BlueThunder() override;
     bool shoot() override;
-    bool executeTurn() override;
+    void executeTurn() override;
 
     //Shooting functions to keep each function to do one task
     size_t aimUp() const;

@@ -13,6 +13,8 @@ MainRobot::MainRobot(int id, string name, size_t const row, size_t const column)
     cout <<"Construced Main" << endl;
 }
 
+
+
 void MainRobot::upgradeRobot() {
 
 }
@@ -61,7 +63,19 @@ void MainRobot::printlife() {
     cout << lives << endl;
 }
 
-void MainRobot::checkBG() {
-    BGptr->isOccupied(2,2);
-    cout << "USED BGPTR" << endl;
+bool MainRobot::checkBG(size_t const row, size_t const column) const {
+    return BGptr->isOccupied(row,column);
+}
+
+MainRobot::MainRobot(const MainRobot &other) {
+    cout << "COPY CONSTRUCTOR CALLED" << endl;
+
+}
+
+bool MainRobot::attack(size_t const row,size_t const column) {
+    if(this->checkBG(row,column)) {
+        BGptr->robotDelete(row,column);
+        this->incKillScore();
+    }
+    return true;
 }

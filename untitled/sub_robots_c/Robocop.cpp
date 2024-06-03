@@ -16,9 +16,8 @@ Robocop::Robocop(int id, string name, size_t row, size_t column, BattleGround* B
 Robocop::~Robocop() {
     cout << "Deleting Robocop" << endl;
 }
-bool Robocop::executeTurn() {
+void Robocop::executeTurn() {
     cout << "Robocop is executing his turn" << endl;
-    return true;
 }
 bool Robocop::look() {
     return true;
@@ -27,7 +26,7 @@ void Robocop::move() {
 
 }
 bool Robocop::shoot() {
-    return true;
+    return tru
 }
 
 

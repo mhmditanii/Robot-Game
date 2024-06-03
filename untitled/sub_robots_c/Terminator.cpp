@@ -20,7 +20,6 @@ bool Terminator::look(){
 void Terminator::move() {
     cout << "TERMINATOR IS MOVING" << endl;
 }
-bool Terminator::executeTurn(){
-    return true;
+void Terminator::executeTurn(){
 }
 

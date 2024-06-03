@@ -15,7 +15,7 @@ public:
     void move() override;
     bool look() override;
     bool shoot() override;
-    bool executeTurn() override;
+    void executeTurn() override;
 };
 
 

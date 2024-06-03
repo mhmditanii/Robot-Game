@@ -36,15 +36,16 @@ public:
     svector(size_t row, size_t column);
     ~svector();
 
-    //               SETTERS AND GETTERS
+    //                      SETTERS AND GETTERS
     shared_ptr<MainRobot> getRobot(size_t row, size_t column) const;
-    void setRobot(size_t row,size_t column, shared_ptr<MainRobot> &robot);
+    void setRobot(size_t row,size_t column, shared_ptr<MainRobot> robot);
     size_t getRows() const;
     size_t getColumns() const;
 
-    //Testing functions
+    //                      Testing functions
     bool isInBounds(size_t row,size_t column) const;
-
+    void moveData(size_t curRow, size_t curCol, size_t destRow, size_t destCol);
+    void print() const;
     //Used to delete the robots from the matrix(Battleground)
     void deleteData(size_t row, size_t column);
 };

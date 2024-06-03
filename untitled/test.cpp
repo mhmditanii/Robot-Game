@@ -20,15 +20,16 @@
 int main() {
         BattleGround* r = new BattleGround(4,4,100);
         // shared_ptr<ShootingRobot> temp = make_shared<BlueThunder>(10,"ahmad",3,3);
-        r->robotInit(10,"ahmad",2,0);
+        r->robotInit(30,"ahmad",2,0);
         r->robotInit(10,"player 2",1,0);
-        shared_ptr<MainRobot> temp = r->getRobot(2,0);
-        cout << "TRYING THE ATTACK " << endl;
-        temp->executeTurn();
-        cout<<"END OF ATTACK" << endl;
+        cout << "WILL LAUNCH ATTACK NOW"<< endl;
+        r->robotExecute(2,0);
+        cout << "END OF ATTACK" << endl << endl << endl;
 
-        cout << "DELETING ROBOT" << endl;
-        r->robotDelete(1,0);
-        cout << "DELETED THE ROBOT" << endl;
+
+
+        //r->print();
+
+
         return 0;
 }

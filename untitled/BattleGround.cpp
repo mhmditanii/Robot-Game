@@ -22,23 +22,59 @@ void BattleGround::incSimulation() {
     stepCount++;
 }
 
+//              **********SETTERS AND GETTERS**********
+
+optional<pair<size_t, size_t>> BattleGround::getVision(size_t const row, size_t const col, int const scope) const {
+    // Define the range of the vision based on scope
+    const int half_scope = scope / 2;
+    const size_t x_start = max<int>(0, static_cast<int>(row) - half_scope);
+    const size_t x_end = min<size_t>(matrix->getRows() - 1, static_cast<size_t>(row + half_scope));
+    const size_t y_start = max<int>(0, static_cast<int>(col) - half_scope);
+    const size_t y_end = min<size_t>(matrix->getColumns() - 1, static_cast<size_t>(col + half_scope));
+
+    // Check for robots in the visible range
+    for (size_t i = x_start; i <= x_end; ++i) {
+        for (size_t j = y_start; j <= y_end; ++j) {
+            if (matrix->getRobot(i, j) != nullptr) {
+                return make_pair(i, j);
+            }
+        }
+    }
+
+    return nullopt;
+}
+
+shared_ptr<MainRobot> BattleGround::getRobot(size_t const row, size_t const column) const {
+    return matrix->getRobot(row,column);
+}
+
+
+//     ************************************************************************
+
+
+//     ***************** ROBOT HANDLING *************************
+
+void BattleGround::robotDelete(size_t const row, size_t const column) const {
+    matrix->deleteData(row,column);
+}
+
 void BattleGround::robotInit(int id, string name, size_t const row,size_t const column) {
     switch(id) {
         case 10: {
-            auto temp1 = make_shared<BlueThunder>(id,name,row,column,this);
-            shared_ptr<MainRobot> temp10 = static_pointer_cast<ShootingRobot>(temp1);
+            const auto temp1 = make_shared<BlueThunder>(id,name,row,column,this);
+            const shared_ptr<MainRobot> temp10 = static_pointer_cast<ShootingRobot>(temp1);
             matrix->setRobot(row,column,temp10);
             break;
         }
         case 20: {
-            auto temp2 = make_shared<Robocop>(id,name,row,column,this);
-            shared_ptr<MainRobot> temp20 = static_pointer_cast<MovingRobot>(temp2);
+            const auto temp2 = make_shared<Robocop>(id,name,row,column,this);
+            const shared_ptr<MainRobot> temp20 = static_pointer_cast<MovingRobot>(temp2);
             matrix->setRobot(row,column,temp20);
             break;
         }
         case 30: {
-            auto temp3 = make_shared<Terminator>(id,name,row,column,this);
-            shared_ptr<MainRobot> temp30 = static_pointer_cast<SeeingRobot>(temp3);
+            const auto temp3 = make_shared<Terminator>(id,name,row,column,this);
+            const shared_ptr<MainRobot> temp30 = static_pointer_cast<SeeingRobot>(temp3);
             matrix->setRobot(row,column,temp30);
             break;
         }
@@ -51,44 +87,24 @@ void BattleGround::robotInit(int id, string name, size_t const row,size_t const 
     cout << "DONE WITH INIT" << endl;
 }
 
-
-//              **********SETTERS AND GETTERS**********
-
-bool BattleGround::getVision(size_t const row,size_t const col, int const scope) const {
-    // Define the range of the vision based on scope
-    const size_t half_scope = scope / 2;
-    const size_t x_start = max<size_t>(0, row - half_scope);
-    const size_t x_end = min<size_t>(matrix->getRows() - 1, row + half_scope);
-    const size_t y_start = max<size_t>(0, col - half_scope);
-    const size_t y_end = min<size_t>(matrix->getColumns() - 1, col + half_scope);
-
-
-    //Check for robots in the visible range
-     for (size_t i = x_start; i <= x_end; i++) {
-         for (size_t j = y_start; j <= y_end; j++) {
-             if (matrix->getRobot(i,j) != nullptr) {
-                 return true;
-                 //should i break or continue?
-             };
-         }
-     }
-
-    return false;
-}
-
-shared_ptr<MainRobot> BattleGround::getRobot(size_t const row, size_t const column) const {
-    return matrix->getRobot(row,column);
-}
-
-
-//     ************************************************************************
-
-void BattleGround::robotDelete(size_t const row, size_t const column) const {
-    matrix->deleteData(row,column);
+void BattleGround::moveRobot(size_t const curRow, size_t const curCol, size_t const destRow, size_t const destCol) {
+    this->matrix->moveData(curRow,curCol,destRow,destCol);
 }
 
 
 
+// TEST ****************************
+void BattleGround::print() {
+    matrix->print();
+}
+void BattleGround::robotExecute(size_t const row, size_t const col) {
+    matrix->getRobot(row,col)->executeTurn();
+}
+
+
+
+
+//   *****************************************************************************
 
 //          ********* MAIN ROBOT CONSTRUCTOR ***********
 

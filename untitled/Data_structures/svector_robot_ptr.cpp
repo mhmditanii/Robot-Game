@@ -79,7 +79,7 @@ shared_ptr<MainRobot> svector<shared_ptr<MainRobot>>::getRobot(size_t const row,
     const int temp = static_cast<int>(row * BGcolumns + column);
     return robots[temp];
 }
-void svector<shared_ptr<MainRobot>>::setRobot(size_t const row, size_t const column, shared_ptr<MainRobot>& robot) {
+void svector<shared_ptr<MainRobot>>::setRobot(size_t const row, size_t const column, shared_ptr<MainRobot> robot) {
     const int temp = static_cast<int>(row * BGcolumns + column);
     robots[temp] = robot;
 }
@@ -95,4 +95,25 @@ void svector<shared_ptr<MainRobot> >::deleteData(size_t const row, size_t const 
 
 bool svector<shared_ptr<MainRobot>>::isInBounds(size_t const row, size_t const column) const {
     return row < BGrows && column < BGcolumns;
+}
+
+void svector<shared_ptr<MainRobot>>::moveData
+(size_t const curRow, size_t const curCol, size_t const destRow, size_t const destCol) {
+    this->setRobot(destRow,destCol,this->getRobot(curRow,curCol));
+    this->deleteData(curRow,curCol);
+}
+
+void svector<shared_ptr<MainRobot>>::print() const {
+    for (size_t i = 0; i < BGrows; ++i) {
+        for (size_t j = 0; j < BGcolumns; ++j) {
+            if(this->getRobot(i,j) == nullptr) {
+                cout << "0" << " : ";
+            }
+            else {
+                cout << "1" << " : ";
+            }
+
+        }
+        cout << endl;
+    }
 }

@@ -18,7 +18,10 @@ private:
     int attempts = 3;
     int killScore = 0;
     size_t rowLoc; size_t columnLoc;  // location of the robot
+
+protected:
     BattleGround* BGptr;
+
 public:
 
 

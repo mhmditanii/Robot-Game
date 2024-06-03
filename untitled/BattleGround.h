@@ -7,6 +7,7 @@
 #include <iostream>
 #include<memory>
 #include<cassert>
+#include<optional>
 
 //HEADERS
 #include "Data_structures/svector.h"
@@ -30,17 +31,25 @@ public:
     BattleGround(size_t x, size_t y , int stepcount);
     ~BattleGround();
     // BATTLEGROUND CONTROL
-    bool isOccupied(size_t x, size_t y) const;
+    [[nodiscard]]bool isOccupied(size_t x, size_t y) const;
     void incSimulation();
 
     //      *******SETTERS AND GETTERS********
-    [[nodiscard]]bool getVision(size_t row,size_t column,int scope) const;
+    [[nodiscard]]optional<pair<size_t,size_t>> getVision(size_t row,size_t column,int scope) const;
     [[nodiscard]]shared_ptr<MainRobot> getRobot(size_t row,size_t column) const;
-
 
     // ROBOT Handling
     void robotInit(int id, string name, size_t row,size_t column);
     void robotDelete(size_t row, size_t column) const;
+    void moveRobot(size_t curRow, size_t curCol, size_t destRow, size_t destCol);
+
+
+
+
+
+    //TEST
+    void print();
+    void robotExecute(size_t row, size_t col); // will automate it later used for testing
 };
 
 

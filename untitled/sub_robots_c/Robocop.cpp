@@ -26,7 +26,7 @@ void Robocop::move() {
 
 }
 bool Robocop::shoot() {
-    return tru
+    return true;
 }
 
 

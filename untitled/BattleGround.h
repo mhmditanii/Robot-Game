@@ -33,6 +33,7 @@ public:
     // BATTLEGROUND CONTROL
     [[nodiscard]]bool isOccupied(size_t x, size_t y) const;
     void incSimulation();
+    bool isWithinBounds(size_t row, size_t column) const;
 
     //      *******SETTERS AND GETTERS********
     [[nodiscard]]optional<pair<size_t,size_t>> getVision(size_t row,size_t column,int scope) const;

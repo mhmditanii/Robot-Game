@@ -75,7 +75,7 @@ size_t svector<shared_ptr<MainRobot>>::getColumns() const {
 }
 
 shared_ptr<MainRobot> svector<shared_ptr<MainRobot>>::getRobot(size_t const row, size_t const column) const {
-    //if(isInBounds(row,column)) assert(false && "ACCESSING OUT OF BOUDNS IN SVECTOR_robot_ptr");
+    if(!isInBounds(row,column)) assert(false && "ACCESSING OUT OF BOUDNS IN SVECTOR_robot_ptr getRobot()");
     const int temp = static_cast<int>(row * BGcolumns + column);
     return robots[temp];
 }

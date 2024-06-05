@@ -46,12 +46,13 @@ public:
 
 
     //TESTING
-    MainRobot(int id,string name, size_t row, size_t column);
     MainRobot(int id,string name, size_t row, size_t column,BattleGround* BGptr);
     virtual ~MainRobot();
+    MainRobot(const MainRobot& other);
+    MainRobot(MainRobot&& other) noexcept;
+
     void printlife();
     bool checkBG(size_t row, size_t column) const;
-    MainRobot(const MainRobot& other);
     bool attack(size_t row, size_t column);
 };
 

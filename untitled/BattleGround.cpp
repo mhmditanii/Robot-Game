@@ -22,6 +22,11 @@ void BattleGround::incSimulation() {
     stepCount++;
 }
 
+bool BattleGround::isWithinBounds(size_t const row, size_t const column) const {
+    return matrix->isInBounds(row,column);
+}
+
+
 //              **********SETTERS AND GETTERS**********
 
 optional<pair<size_t, size_t>> BattleGround::getVision(size_t const row, size_t const col, int const scope) const {

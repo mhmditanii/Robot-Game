@@ -5,13 +5,6 @@
 
 #include "../BattleGround.h"
 
-MainRobot::MainRobot(int id, string name, size_t const row, size_t const column) {
-    this->name = name;
-    this->rowLoc = row;
-    this->columnLoc = column;
-    this->id = -1;
-    cout <<"Construced Main" << endl;
-}
 
 
 
@@ -67,9 +60,15 @@ bool MainRobot::checkBG(size_t const row, size_t const column) const {
     return BGptr->isOccupied(row,column);
 }
 
-MainRobot::MainRobot(const MainRobot &other) {
-    cout << "COPY CONSTRUCTOR CALLED" << endl;
+MainRobot::MainRobot(const MainRobot& other)
+    : id(other.id), name(other.name), rowLoc(other.rowLoc), columnLoc(other.columnLoc), BGptr(other.BGptr) {
+    cout << "Copy Constructed Main" << endl;
+}
 
+MainRobot::MainRobot(MainRobot&& other) noexcept
+        : id(other.id), name(move(other.name)), rowLoc(other.rowLoc), columnLoc(other.columnLoc), BGptr(other.BGptr) {
+    other.BGptr = nullptr;
+    cout << "Move Constructed Main" << endl;
 }
 
 bool MainRobot::attack(size_t const row,size_t const column) {

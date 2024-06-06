@@ -18,19 +18,42 @@
 
 
 int main() {
-        BattleGround* r = new BattleGround(4,4,100);
+        BattleGround* r = new BattleGround(5,5,100);
         // shared_ptr<ShootingRobot> temp = make_shared<BlueThunder>(10,"ahmad",3,3);
         r->robotInit(20,"ahmad",1,1);
-        r->robotInit(20,"player 2",1,0);
+        r->robotInit(20,"player 3",1,0);
+        r->robotInit(20,"player 4",2,1);
+        r->robotInit(20,"player 5",3,1);
+        r->robotInit(20,"player 6",3,3);
+        r->robotInit(20,"player 7",3,2);
+        r->robotInit(20,"player 8",3,4);
+        r->robotInit(20,"player 9",4,4);
+        r->robotInit(20,"player 10",2,4);
         r->print();
         cout << endl << endl;
         cout <<"MOVE 1" << endl;
         r->robotExecute(1,1);
+        r->robotExecute(1,1);
+        r->robotExecute(1,1);
+        r->robotExecute(1,1);
+
         r->print();
 
-        cout << endl << endl <<"MOVE 2" << endl;
-        r->robotExecute(1,0);
-        r->print();
+        // cout << endl <<"MOVE" << endl;
+        // r->robotExecute(1,0);
+        // r->print();
+        //
+        // cout << endl <<"MOVE" << endl;
+        // r->robotExecute(2,1);
+        // r->print();
+        //
+        // cout << endl <<"MOVE" << endl;
+        // r->robotExecute(3,1);
+        // r->print();
+        //
+        // cout << endl <<"MOVE" << endl;
+        // r->robotExecute(3,3);
+        // r->print();
 
 
 

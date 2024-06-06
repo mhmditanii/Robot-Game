@@ -8,6 +8,7 @@
 #include<cstdlib>
 #include<ctime>
 #include <optional>
+#include<cmath>
 
 #include "../robots_h/MovingRobot.h"
 #include "../robots_h/SeeingRobot.h"
@@ -23,12 +24,14 @@ public:
     bool shoot() override;
     void executeTurn() override;
 
-    //Move functions
+    //Move / Shoot (Decision maker)
     pair<size_t,size_t> moveUp() const;
     pair<size_t,size_t> moveRight() const;
     pair<size_t,size_t> moveDown() const;
     pair<size_t,size_t> moveLeft() const;
     pair<size_t,size_t> moveDecision() const;
+    pair<size_t,size_t> fireDecision() const;
+    pair<size_t,size_t> decisionMaker(bool move) const;
 };
 
 

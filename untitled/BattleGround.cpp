@@ -15,6 +15,9 @@ BattleGround::~BattleGround() = default;
 
 
 bool BattleGround::isOccupied(size_t const x, size_t const y) const {
+    if(!matrix->isInBounds(x,y)) {
+        assert(false && "BG isOccupied trying to access out of bound");
+    }
     return matrix->getRobot(x,y) != nullptr;
 }
 

@@ -6,6 +6,10 @@
 
 #include "../BattleGround.h"
 
+static std::random_device rd;    //Device used to generate random numbers
+static std::mt19937 gen(rd());
+
+
 Robocop::Robocop(int id, string name, size_t row, size_t column, BattleGround* BGptr)
     :   MainRobot(id,name,row,column, BGptr),
         MovingRobot(id,name,row,column,BGptr),
@@ -19,20 +23,24 @@ Robocop::~Robocop() {
     cout << "Deleting Robocop" << endl;
 }
 void Robocop::executeTurn() {
-    cout << "Robocop is executing his turn" << endl;
-    this->look();
-    this->move();
+    // this->look();
+    // this->move();
+    this->shoot();
 }
 bool Robocop::look() {
     do {
         temp = moveDecision();
-        if(!BGptr->isWithinBounds(temp.first,temp.second)) {
+        // Check if the proposed move is within bounds
+        if (!BGptr->isWithinBounds(temp.first, temp.second)) {
             continue;
         }
-    }while(BGptr->isOccupied(temp.first,temp.second));  //If not occupied break and move
-    if(!BGptr->isWithinBounds(temp.first,temp.second)) {
-        assert(false && "ROBOCOP LOOK IS ACCESSING OUT OF BOUNDS");
-    }
+        // Check if the location is occupied
+        if (!BGptr->isOccupied(temp.first, temp.second)) {
+            // If within bounds and not occupied, exit the loop
+            break;
+        }
+    } while (true); // Continue looping until a valid move is found
+
     return true;    //Doesn't matter what the function returns here
 }
 
@@ -42,11 +50,18 @@ void Robocop::move() {
 }
 
 bool Robocop::shoot() {
+    pair<size_t,size_t> target;
+    //Loop to shoot 3 times
+    for(int i = 0; i < 3; ++i) {
+        target = this->decisionMaker(false);
+        this->attack(target.first,target.second);
+    }
+
     return true;
 }
 
 
-//              ********MOVE HELPER FUNCTIONS************
+//              ********MOVE / SHOOT + DECISION MAKING************
 
 pair<size_t,size_t> Robocop::moveUp() const {
     return make_pair(getRowLoc() - 1,getColumnLoc());;
@@ -65,10 +80,7 @@ pair<size_t,size_t> Robocop::moveLeft() const {
 }
 
 pair<size_t, size_t> Robocop::moveDecision() const {
-    static random_device rd;
-    static mt19937 gen(rd());
-    uniform_int_distribution<> dis(1, 4); //+1 because I don't need a 0 result
-
+    uniform_int_distribution<> dis(1, 4); // +1 because I don't need a 0 result
     switch (dis(gen)) {
         case 1:
             return this->moveUp();
@@ -80,5 +92,37 @@ pair<size_t, size_t> Robocop::moveDecision() const {
             return this->moveLeft();
         default:
             assert(false && "RANDOM NUMBER RETURNING OUT OF BOUND IN ROBOCOP");
+    }
+}
+
+pair<size_t, size_t> Robocop::fireDecision() const {
+    //Values should be ranging from (-10,10) to include the whole range
+    uniform_int_distribution<> dis(-10, 10);
+    int x, y;
+
+    //This loop computes the possible target location
+    do {
+         x = dis(gen);
+         y = dis(gen);
+
+         x = abs(static_cast<int>(x - this->getRowLoc()));    //Positive row loc
+         y = abs(static_cast<int>(y - this->getColumnLoc())); //Positive col loc
+
+         if(x == this->getRowLoc() && y == this->getColumnLoc()) {
+             continue; //prevent suicide
+         }
+    } while (x + y > 10 ||                   //Ensure x + y <= 10
+             !this->BGptr->isWithinBounds    //Checks if locations is valid
+             (x,y));
+
+    return make_pair(static_cast<size_t>(x), static_cast<size_t>(y));
+}
+
+pair<size_t, size_t> Robocop::decisionMaker(bool const move) const {
+    if (move) {
+        return moveDecision();
+    }
+    else {
+        return fireDecision();
     }
 }

@@ -54,136 +54,108 @@ build CMakeFiles/untitled.dir/BattleGround.cpp.o: CXX_COMPILER__untitled_unscann
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/robots_c/MainRobot.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/robots_c/MainRobot.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/robots_c/MainRobot.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/Data_structures/svector.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/Data_structures/svector.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/Data_structures/svector.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Data_structures
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/robots_c/MovingRobot.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/robots_c/MovingRobot.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/robots_c/MovingRobot.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/robots_c/ShootingRobot.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/robots_c/ShootingRobot.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/robots_c/ShootingRobot.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/robots_c/SeeingRobot.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/robots_c/SeeingRobot.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/robots_c/SeeingRobot.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/robots_c/SteppingRobot.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/robots_c/SteppingRobot.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/robots_c/SteppingRobot.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/sub_robots_c/Robocop.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/sub_robots_c/Robocop.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/sub_robots_c/Robocop.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/sub_robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/sub_robots_c/Terminator.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/sub_robots_c/Terminator.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/sub_robots_c/Terminator.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/sub_robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/sub_robots_c/BlueThunder.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/sub_robots_c/BlueThunder.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/sub_robots_c/BlueThunder.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/sub_robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/upgraded_robots_c/TerminatorRoboCop.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/upgraded_robots_c/TerminatorRoboCop.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/upgraded_robots_c/TerminatorRoboCop.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/upgraded_robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/upgraded_robots_c/MadBot.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/upgraded_robots_c/MadBot.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/upgraded_robots_c/MadBot.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/upgraded_robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/upgraded_robots_c/RoboTank.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/upgraded_robots_c/RoboTank.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/upgraded_robots_c/RoboTank.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/upgraded_robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/upgraded_robots_c/UltimateRobot.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/upgraded_robots_c/UltimateRobot.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/upgraded_robots_c/UltimateRobot.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/upgraded_robots_c
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/test.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/test.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/test.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/Data_structures/svector_robot_ptr.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/Data_structures/svector_robot_ptr.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/Data_structures/svector_robot_ptr.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Data_structures
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
 
 build CMakeFiles/untitled.dir/Data_structures/linked_list.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/Data_structures/linked_list.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/Data_structures/linked_list.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Data_structures
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
-  TARGET_PDB = untitled.pdb
+
+build CMakeFiles/untitled.dir/Data_structures/Queue.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/mhmd/Robot-Game/untitled/Data_structures/Queue.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Data_structures/Queue.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Data_structures
 
 
 # =============================================================================
@@ -193,14 +165,13 @@ build CMakeFiles/untitled.dir/Data_structures/linked_list.cpp.o: CXX_COMPILER__u
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/BattleGround.cpp.o CMakeFiles/untitled.dir/robots_c/MainRobot.cpp.o CMakeFiles/untitled.dir/Data_structures/svector.cpp.o CMakeFiles/untitled.dir/robots_c/MovingRobot.cpp.o CMakeFiles/untitled.dir/robots_c/ShootingRobot.cpp.o CMakeFiles/untitled.dir/robots_c/SeeingRobot.cpp.o CMakeFiles/untitled.dir/robots_c/SteppingRobot.cpp.o CMakeFiles/untitled.dir/sub_robots_c/Robocop.cpp.o CMakeFiles/untitled.dir/sub_robots_c/Terminator.cpp.o CMakeFiles/untitled.dir/sub_robots_c/BlueThunder.cpp.o CMakeFiles/untitled.dir/upgraded_robots_c/TerminatorRoboCop.cpp.o CMakeFiles/untitled.dir/upgraded_robots_c/MadBot.cpp.o CMakeFiles/untitled.dir/upgraded_robots_c/RoboTank.cpp.o CMakeFiles/untitled.dir/upgraded_robots_c/UltimateRobot.cpp.o CMakeFiles/untitled.dir/test.cpp.o CMakeFiles/untitled.dir/Data_structures/svector_robot_ptr.cpp.o CMakeFiles/untitled.dir/Data_structures/linked_list.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/BattleGround.cpp.o CMakeFiles/untitled.dir/robots_c/MainRobot.cpp.o CMakeFiles/untitled.dir/Data_structures/svector.cpp.o CMakeFiles/untitled.dir/robots_c/MovingRobot.cpp.o CMakeFiles/untitled.dir/robots_c/ShootingRobot.cpp.o CMakeFiles/untitled.dir/robots_c/SeeingRobot.cpp.o CMakeFiles/untitled.dir/robots_c/SteppingRobot.cpp.o CMakeFiles/untitled.dir/sub_robots_c/Robocop.cpp.o CMakeFiles/untitled.dir/sub_robots_c/Terminator.cpp.o CMakeFiles/untitled.dir/sub_robots_c/BlueThunder.cpp.o CMakeFiles/untitled.dir/upgraded_robots_c/TerminatorRoboCop.cpp.o CMakeFiles/untitled.dir/upgraded_robots_c/MadBot.cpp.o CMakeFiles/untitled.dir/upgraded_robots_c/RoboTank.cpp.o CMakeFiles/untitled.dir/upgraded_robots_c/UltimateRobot.cpp.o CMakeFiles/untitled.dir/test.cpp.o CMakeFiles/untitled.dir/Data_structures/svector_robot_ptr.cpp.o CMakeFiles/untitled.dir/Data_structures/linked_list.cpp.o CMakeFiles/untitled.dir/Data_structures/Queue.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/untitled.dir/
   TARGET_FILE = untitled
-  TARGET_PDB = untitled.pdb
+  TARGET_PDB = untitled.dbg
 
 
 #############################################
@@ -245,14 +216,14 @@ build all: phony untitled
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/mhmd/Robot-Game/untitled/CMakeLists.txt /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/mhmd/Robot-Game/untitled/CMakeLists.txt /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/mhmd/Robot-Game/untitled/CMakeLists.txt /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /home/mhmd/Robot-Game/untitled/CMakeLists.txt /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /snap/clion/277/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

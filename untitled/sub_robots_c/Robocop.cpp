@@ -23,19 +23,19 @@ Robocop::~Robocop() {
     cout << "Deleting Robocop" << endl;
 }
 void Robocop::executeTurn() {
-    // this->look();
-    // this->move();
+    this->look();
+    this->move();
     this->shoot();
 }
 bool Robocop::look() {
     do {
-        temp = moveDecision();
+        temp = this->decisionMaker(true);
         // Check if the proposed move is within bounds
         if (!BGptr->isWithinBounds(temp.first, temp.second)) {
             continue;
         }
         // Check if the location is occupied
-        if (!BGptr->isOccupied(temp.first, temp.second)) {
+        if (!this->checkBG(temp.first, temp.second)) {
             // If within bounds and not occupied, exit the loop
             break;
         }
@@ -54,6 +54,9 @@ bool Robocop::shoot() {
     //Loop to shoot 3 times
     for(int i = 0; i < 3; ++i) {
         target = this->decisionMaker(false);
+        if(target.first==this->getRowLoc() && target.second == this->getColumnLoc()) {
+            assert(false && "ROBOCOP IS ATTEMPTING SUICIDE");
+        }
         this->attack(target.first,target.second);
     }
 
@@ -96,27 +99,31 @@ pair<size_t, size_t> Robocop::moveDecision() const {
 }
 
 pair<size_t, size_t> Robocop::fireDecision() const {
-    //Values should be ranging from (-10,10) to include the whole range
+    // Values should be ranging from (-10,10) to include the whole range
     uniform_int_distribution<> dis(-10, 10);
     int x, y;
+    int rowLoc = static_cast<int>(this->getRowLoc());
+    int colLoc = static_cast<int>(this->getColumnLoc());
 
-    //This loop computes the possible target location
+    // This loop computes the possible target location
     do {
-         x = dis(gen);
-         y = dis(gen);
+        int tempX = dis(gen);
+        int tempY = dis(gen);
 
-         x = abs(static_cast<int>(x - this->getRowLoc()));    //Positive row loc
-         y = abs(static_cast<int>(y - this->getColumnLoc())); //Positive col loc
+        // Convert to absolute distance from current location
+        x = abs(tempX - rowLoc);
+        y = abs(tempY - colLoc);
 
-         if(x == this->getRowLoc() && y == this->getColumnLoc()) {
-             continue; //prevent suicide
-         }
-    } while (x + y > 10 ||                   //Ensure x + y <= 10
-             !this->BGptr->isWithinBounds    //Checks if locations is valid
-             (x,y));
+        // Check if the computed coordinates are not the current location
+        // and the sum of distances is within the allowed range
+        // and the target location is within bounds
+    } while ((x == rowLoc && y == colLoc) ||     // Prevent targeting current location
+             (x + y > 10) ||                     // Ensure x + y <= 10
+             !this->BGptr->isWithinBounds(x, y)); // Check if location is valid
 
     return make_pair(static_cast<size_t>(x), static_cast<size_t>(y));
 }
+
 
 pair<size_t, size_t> Robocop::decisionMaker(bool const move) const {
     if (move) {

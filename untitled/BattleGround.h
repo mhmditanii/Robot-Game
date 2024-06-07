@@ -24,7 +24,7 @@ private:
     int stepCount;
     // svector<size_t>* matrix;
     svector<shared_ptr<MainRobot>>* matrix;    //using svector_robot_ptr to build
-                                    //a matrix of pointers
+                                               //a matrix of pointers
 
 public:
 
@@ -43,10 +43,10 @@ public:
     void robotInit(int id, string name, size_t row,size_t column);
     void robotDelete(size_t row, size_t column) const;
     void moveRobot(size_t curRow, size_t curCol, size_t destRow, size_t destCol);
+    void robotEnqueue(size_t row, size_t column) const;
+    void robotDequeue() const;
 
-
-
-
+    void deathHandler(size_t row,size_t col) const;
 
     //TEST
     void print();

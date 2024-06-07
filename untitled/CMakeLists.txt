@@ -38,4 +38,6 @@ add_executable(untitled
         Data_structures/svector_robot_ptr.h
         Data_structures/linked_list.cpp
         Data_structures/linked_list.h
+        Data_structures/Queue.cpp
+        Data_structures/Queue.h
 )

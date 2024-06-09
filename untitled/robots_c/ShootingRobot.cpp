@@ -12,3 +12,6 @@ ShootingRobot::ShootingRobot(int id, string name, size_t row, size_t column, Bat
 ShootingRobot::~ShootingRobot() {
     cout << "Deleting Shooting Robot" << endl;
 }
+ShootingRobot::ShootingRobot(const ShootingRobot &other){
+    cout << "Using copy Shooting constructor" << "**************"<< endl << "***********" << endl;
+}

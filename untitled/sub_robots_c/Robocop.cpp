@@ -83,7 +83,7 @@ pair<size_t,size_t> Robocop::moveLeft() const {
 }
 
 pair<size_t, size_t> Robocop::moveDecision() const {
-    uniform_int_distribution<> dis(1, 4); // +1 because I don't need a 0 result
+    uniform_int_distribution<> dis(1, 4);
     switch (dis(gen)) {
         case 1:
             return this->moveUp();

@@ -13,6 +13,7 @@ private:
 public:
     ShootingRobot(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~ShootingRobot() override;
+    ShootingRobot(const ShootingRobot& other);
 
     virtual bool shoot() = 0;
 };

@@ -56,6 +56,10 @@ shared_ptr<MainRobot> BattleGround::getRobot(size_t const row, size_t const colu
     return matrix->getRobot(row,column);
 }
 
+pair<size_t, size_t> BattleGround::getMatrixBounds() const {
+    return make_pair(this->matrix->getRows(),this->matrix->getColumns());
+}
+
 
 //     ************************************************************************
 
@@ -134,6 +138,7 @@ void BattleGround::print() {
 void BattleGround::robotExecute(size_t const row, size_t const col) {
     matrix->getRobot(row,col)->executeTurn();
 }
+
 
 
 

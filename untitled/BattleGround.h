@@ -38,6 +38,7 @@ public:
     //      *******SETTERS AND GETTERS********
     [[nodiscard]]optional<pair<size_t,size_t>> getVision(size_t row,size_t column,int scope) const;
     [[nodiscard]]shared_ptr<MainRobot> getRobot(size_t row,size_t column) const;
+    pair<size_t,size_t> getMatrixBounds() const;
 
     // ROBOT Handling
     void robotInit(int id, string name, size_t row,size_t column);

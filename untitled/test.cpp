@@ -3,23 +3,23 @@
 //
 #include<iostream>
 #include<memory>
-// #include"robots_h/MovingRobot.h"
-// #include"robots_h/SteppingRobot.h"
-// #include"robots_h/SeeingRobot.h"
-
-#include"sub_robots_h/Robocop.h"
-#include"sub_robots_h/BlueThunder.h"
-#include"sub_robots_h/Terminator.h"
-
-
 #include"BattleGround.h"
 #include"Data_structures/svector.h"
 #include"Data_structures/svector_robot_ptr.h"
-#include "upgraded_robots_h/MadBot.h"
+using namespace std;
 
 
 int main() {
+        BattleGround* bg = new BattleGround(6,6,20);
+        bg->robotInit(20,"ahmad",2,2);
+        bg->robotInit(50,"ahmad",1,2);
+        bg->robotInit(50,"ahmad",0,0);
+        bg->robotInit(50,"ahmad",2,0);
+        bg->robotInit(50,"ahmad",0,2);
+        bg->startSimulator();
 
+        cout << "END ********************" << endl;
+        bg->print();
 
         return 0;
 }

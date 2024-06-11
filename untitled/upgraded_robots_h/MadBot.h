@@ -15,6 +15,7 @@ public:
     MadBot(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~MadBot() override;
     bool shoot() override;
+    void executeTurn() override;
 };
 
 

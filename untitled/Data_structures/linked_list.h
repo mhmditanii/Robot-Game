@@ -18,7 +18,7 @@ private:
     };
 
     Node* head;
-
+    int size;
 public:
     LinkedList();
     ~LinkedList();
@@ -26,7 +26,9 @@ public:
     void insertAtBeginning(shared_ptr<MainRobot> value);
     void insertAtEnd(shared_ptr<MainRobot> value);
     void deleteValue(shared_ptr<MainRobot> value);
+    int getSize() const;
     Node* getHead() const;
+    shared_ptr<MainRobot> iterate();
 };
 
 #endif // LINKEDLIST_H

@@ -7,13 +7,13 @@
 #include "MainRobot.h"
 
 
-class SteppingRobot : public MainRobot{
-private:
+class SteppingRobot : public virtual MainRobot{
 
 public:
     SteppingRobot(int id,string name, size_t row, size_t column, BattleGround* BGptr);
-    ~SteppingRobot();
-    virtual bool step() = 0;
+    ~SteppingRobot() override;
+
+    virtual void step() = 0;
 };
 
 

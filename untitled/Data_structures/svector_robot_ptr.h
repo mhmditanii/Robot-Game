@@ -34,12 +34,16 @@ private:
                                                 // to avoid creating objects in constructor
     size_t BGrows;
     size_t BGcolumns;
+
+
+public:
+
     //LS responsible for handling the robots execution and turns
     LinkedList* activeList;
     //Q responsible for inactive robots
     Queue* waitQueue;
 
-public:
+
     //Constructor for the robot svector used in building the battleground matrix
     //Initializes the battleground to nullptr
     svector(size_t row, size_t column);

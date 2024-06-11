@@ -5,3 +5,6 @@ List to do :
 2. Work on terminator Random move
 3. Work on bluethunder shoot diagonally in shootfunction
 4. Do checkings for blue thunder and madbot when they are shooting in edge positions
+5. Implement Terminator move function
+6. Add upgraded_robots_c/UltimateRobot.cpp to makefile
+7. upgraded_robots_c/RoboTank.cpp upgraded_robots_c/TerminatorRoboCop.cpp

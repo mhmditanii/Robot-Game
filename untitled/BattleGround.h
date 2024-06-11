@@ -17,7 +17,7 @@
 #include"sub_robots_h/Robocop.h"
 #include"sub_robots_h/Terminator.h"
 #include"sub_robots_h/BlueThunder.h"
-
+#include"upgraded_robots_h/all_upgraded.h"
 
 class BattleGround {
 private:
@@ -49,9 +49,11 @@ public:
 
     void deathHandler(size_t row,size_t col) const;
 
+
     //TEST
     void print();
     void robotExecute(size_t row, size_t col); // will automate it later used for testing
+    void startSimulator();
 };
 
 

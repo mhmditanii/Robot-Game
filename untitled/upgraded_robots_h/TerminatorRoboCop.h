@@ -9,7 +9,17 @@
 
 
 class TerminatorRoboCop : public Robocop, Terminator{
+public:
+    TerminatorRoboCop(int id,string name, size_t row, size_t column, BattleGround* BGptr);
+    ~TerminatorRoboCop();
+    void executeTurn() override;
 
+    //Terminator methods
+    using Terminator::look;
+    using Terminator::move;
+    using Terminator::step;
+    //Robocop methods
+    using Robocop::shoot;
 };
 
 

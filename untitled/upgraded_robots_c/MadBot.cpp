@@ -19,6 +19,10 @@ MadBot::~MadBot() {
 
 bool MadBot::shoot() {
     const int random = dis(gen);
-    const pair<size_t,size_t> target = this->getTargetCoordinates(random);
-    return this->attack(target.first,target.second);
+    auto[x,y] = this->getTargetCoordinates(random);
+    return this->attack(x,y);
+}
+
+void MadBot::executeTurn() {
+    this->shoot();
 }

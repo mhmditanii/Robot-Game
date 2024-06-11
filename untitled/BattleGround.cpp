@@ -44,6 +44,11 @@ optional<pair<size_t, size_t>> BattleGround::getVision(size_t const row, size_t 
     for (size_t i = x_start; i <= x_end; ++i) {
         for (size_t j = y_start; j <= y_end; ++j) {
             if (matrix->getRobot(i, j) != nullptr) {
+                //No returning the location of the calling robot (suicide)
+                if(i == row && j == col) {
+                    //skips to next iteration
+                    continue;
+                }
                 return make_pair(i, j);
             }
         }
@@ -94,7 +99,7 @@ void BattleGround::deathHandler(size_t const row, size_t const column) const {
 }
 
 
-void BattleGround::robotInit(int id, string name, size_t const row,size_t const column) {
+void BattleGround::robotInit(int id, string name, size_t const row, size_t const column) {
     switch(id) {
         case 10: {
             const auto temp1 = make_shared<BlueThunder>(id,name,row,column,this);
@@ -117,13 +122,34 @@ void BattleGround::robotInit(int id, string name, size_t const row,size_t const 
             matrix->setRobot(row,column,temp30);
             break;
         }
-        //default for unit testing
+        case 40: {
+            const auto temp4 = make_shared<MadBot>(id, name, row, column, this);
+            const shared_ptr<MainRobot> temp40 = static_pointer_cast<ShootingRobot>(temp4);
+            matrix->setRobotToList(temp40);
+            matrix->setRobot(row, column, temp40);
+            break;
+        }
+        case 50: {
+            const auto temp5 = make_shared<RoboTank>(id, name, row, column, this);
+            const shared_ptr<MainRobot> temp50 = static_pointer_cast<BlueThunder>(temp5);
+            matrix->setRobotToList(temp50);
+            matrix->setRobot(row, column, temp50);
+            break;
+        }
+        case 60: {
+            const auto temp6 = make_shared<TerminatorRoboCop>(id, name, row, column, this);
+            const shared_ptr<MainRobot> temp60 = static_pointer_cast<Robocop>(temp6);
+            matrix->setRobotToList(temp60);
+            matrix->setRobot(row, column, temp60);
+            break;
+        }
+        // default for unit testing
         default: {
             assert(false && "Can not init robot because of INVALID ID/ ERROR BATTLEGROUND_UTIL.cpp");
-
         }
     }
 }
+
 
 void BattleGround::moveRobot(size_t const curRow, size_t const curCol, size_t const destRow, size_t const destCol) {
     this->matrix->moveData(curRow,curCol,destRow,destCol);
@@ -136,10 +162,18 @@ void BattleGround::print() {
     matrix->print();
 }
 void BattleGround::robotExecute(size_t const row, size_t const col) {
+    if(getRobot(row,col)==nullptr) assert(false&& "robotExecute accessing nullptr (SUICIDE)");
     matrix->getRobot(row,col)->executeTurn();
 }
 
-
+void BattleGround::startSimulator() {
+    shared_ptr<MainRobot> exetemp;
+    while( (exetemp = matrix->activeList->iterate()) != nullptr && stepCount > 0) {
+        this->robotExecute(exetemp->getRowLoc(),exetemp->getColumnLoc());
+        this->print();
+        this->stepCount--;
+    }
+}
 
 
 
@@ -155,3 +189,4 @@ MainRobot::MainRobot(int id, string name, size_t const row, size_t const column,
     this->BGptr = BGptr;
     cout <<"Construced Main" << endl;
 }
+

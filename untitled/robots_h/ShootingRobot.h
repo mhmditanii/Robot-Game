@@ -7,7 +7,7 @@
 
 #include"MainRobot.h"
 
-class ShootingRobot : public virtual  MainRobot{
+class ShootingRobot : public virtual MainRobot{
 private:
 
 public:

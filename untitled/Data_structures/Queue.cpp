@@ -3,7 +3,6 @@
 //
 
 #include "Queue.h"
-#include <stdexcept>
 
 Queue::Queue() {}
 
@@ -15,7 +14,7 @@ void Queue::enqueue(shared_ptr<MainRobot> value) {
 
 shared_ptr<MainRobot> Queue::dequeue() {
     if (isEmpty()) {
-        assert(false && "Queue is empty, Can not access");
+        throw out_of_range("Queue is empty");
     }
     shared_ptr<MainRobot> frontValue = Qlist.getHead()->data;
     Qlist.deleteValue(frontValue);

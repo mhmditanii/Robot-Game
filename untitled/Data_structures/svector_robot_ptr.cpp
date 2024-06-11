@@ -144,8 +144,6 @@ pair<size_t, size_t> svector<shared_ptr<MainRobot> >::genRandPos() const {
     return make_pair(row, col);
 }
 
-
-
 void svector<shared_ptr<MainRobot>>::print() const {
     for (size_t i = 0; i < BGrows; ++i) {
         for (size_t j = 0; j < BGcolumns; ++j) {

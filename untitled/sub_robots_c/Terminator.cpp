@@ -24,12 +24,6 @@ bool Terminator::look(){
     return false;
 }
 
-void Terminator::move() {
-    // Create a random device and a random number generator
-    // random_device rd;
-    // mt19937 gen(rd());
-    // uniform_int_distribution<int> dist();
-}
 
 void Terminator::step() {
     // No need to check for bounds (Checked in look function)
@@ -37,10 +31,38 @@ void Terminator::step() {
     if (getRowLoc() == dest->first && getColumnLoc() == dest->second) {
         assert(false && "TERMINATOR TRYING TO COMMIT SUICIDE IN STEP FUNCTION");
     }
+    cout << "ATTACKING USING STEP FUNCTION" << endl;
     this->attack(dest->first,dest->second);
     BGptr->moveRobot(this->getRowLoc(),this->getColumnLoc(),dest->first,dest->second);
 }
 
+void Terminator::move() {
+    // Create a random device and a random number generator
+    random_device rd;
+    mt19937 gen(rd());
+    //Variables initialization for bounds and result
+    auto[minX,minY] = this->moveLimitBackGen();
+    auto[maxX,maxY] = this->moveLimitFrontGen();
+    size_t resX,resY;
+
+    //Initialize the generators with the limits
+    uniform_int_distribution<size_t> XGen(minX,maxX);
+    uniform_int_distribution<size_t> YGen(minY,maxY);
+
+    //Looping to find a valid destination
+    do {
+        //making sure the move is 3 tiles
+        do {
+            resX = XGen(gen);
+            resY = YGen(gen);
+            cout << resX << "    " << resY << endl;
+        }while(abs(static_cast<int>(resX) - static_cast<int>(resY)) > 3);
+    //No need to check if it is occupied because it will use step if any robot is in scope
+    }while((resX == getRowLoc() && resY == getColumnLoc())
+           || (BGptr->getRobot(resX,resY)!= nullptr));
+
+    BGptr->moveRobot(getRowLoc(),getColumnLoc(),resX,resY);
+}
 
 void Terminator::executeTurn(){
     //Checks for robots in scope then executes based on result of look
@@ -48,8 +70,30 @@ void Terminator::executeTurn(){
         this->step();
     }
     else {
+        cout << "MOVING" << endl;
         this->move();
     }
 }
 
+//Checks the bounds for the terminator move function
+pair<size_t, size_t> Terminator::moveLimitFrontGen() const {
+    size_t x , y;
+
+    auto [limX, limY] = BGptr->getMatrixBounds();
+    //if Location + scope > bounds -> your scope limit is bounds
+    x = this->getRowLoc() + 3 >= limX - 1 ? limX  - 1: this->getRowLoc() + 3;
+    y = this->getColumnLoc() + 3 >= limY - 1 ? limY - 1: this->getColumnLoc() + 3;
+
+    return make_pair(x,y);
+}
+
+pair<size_t, size_t> Terminator::moveLimitBackGen() const {
+    size_t x, y;
+
+    // Ensuring robot doesn't go below 0 (no -3 because it may cause underflow)
+    x = (this->getRowLoc() < 3) ? 0 : this->getRowLoc() - 3;
+    y = (this->getColumnLoc() < 3) ? 0 : this->getColumnLoc() - 3;
+
+    return make_pair(x, y);
+}
 

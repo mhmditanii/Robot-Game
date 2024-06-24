@@ -72,9 +72,21 @@ MainRobot::MainRobot(MainRobot&& other) noexcept
 }
 
 bool MainRobot::attack(size_t const row,size_t const column) {
+    cout << this->name <<" (" << this->rowLoc << "," << this->columnLoc
+        << ")"<<" IS ATTACKING LOCATION (" << row << "," << column <<")"<< endl;
     if(this->checkBG(row,column)) {
+        cout << this->name << " KILLED A ROBOT" << endl;
         BGptr->robotDelete(row,column);
         this->incKillScore();
     }
     return true;
+}
+
+void MainRobot::updateLoc(pair<size_t, size_t> const & newLoc) {
+    this->rowLoc = newLoc.first;
+    this->columnLoc = newLoc.second;
+}
+
+string MainRobot::getName() const {
+    return this->name;
 }

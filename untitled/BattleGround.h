@@ -22,7 +22,6 @@
 class BattleGround {
 private:
     int stepCount;
-    // svector<size_t>* matrix;
     svector<shared_ptr<MainRobot>>* matrix;    //using svector_robot_ptr to build
                                                //a matrix of pointers
 
@@ -42,18 +41,23 @@ public:
 
     // ROBOT Handling
     void robotInit(int id, string name, size_t row,size_t column);
-    void robotDelete(size_t row, size_t column) const;
     void moveRobot(size_t curRow, size_t curCol, size_t destRow, size_t destCol);
     void robotEnqueue(size_t row, size_t column) const;
     void robotDequeue() const;
 
+    //Used for simplification and usage in mainrobot class in attack
+    void robotDelete(size_t row, size_t column) const;
+    //Handles the enqueue or eliminating robots
     void deathHandler(size_t row,size_t col) const;
+    //Eliminates the robot (life = 0)
+    void robotKill(size_t row,size_t col) const;
 
 
     //TEST
     void print();
     void robotExecute(size_t row, size_t col); // will automate it later used for testing
-    void startSimulator();
+    void startCycle();
+    void gameHandler();
 };
 
 

@@ -72,7 +72,27 @@ pair<size_t, size_t> BattleGround::getMatrixBounds() const {
 //     ***************** ROBOT HANDLING *************************
 
 void BattleGround::robotDelete(size_t const row, size_t const column) const {
+    this->deathHandler(row,column);
+}
+
+void BattleGround::robotKill(size_t const row, size_t const column) const {
     matrix->deleteData(row,column);
+}
+
+
+void BattleGround::deathHandler(size_t const row, size_t const column) const {
+    //Checks if robot should be deleted or queue
+    auto temp = matrix->getRobot(row,column);
+    if(matrix->getRobot(row,column) == nullptr) {
+        assert(false && "deathHandler in BG trying to use nullptr");
+    }
+    if(temp->getLife() == 0) {
+        cout << temp->getName() << " IS GOING TO BE REMOVED FROM THE GAME " << endl;
+        this->robotKill(row,column);
+        return;
+    }
+    temp->decrementLife();
+    this->robotEnqueue(row,column);
 }
 
 void BattleGround::robotEnqueue(size_t const row, size_t const column) const {
@@ -80,23 +100,21 @@ void BattleGround::robotEnqueue(size_t const row, size_t const column) const {
 }
 
 void BattleGround::robotDequeue() const {
-    shared_ptr<MainRobot> tempRobot = this->matrix->dequeueData();
-    pair<size_t,size_t>   tempPos = this->matrix->genRandPos();
-    tempRobot->setLoc(tempPos.first,tempPos.second);
-    this->matrix->setRobot(tempPos.first,tempPos.second,tempRobot);
+
+    shared_ptr<MainRobot> tempRobot = this->matrix->dequeueData();;
+    //If nullptr -> Queue is empty so do nothing
+    if(tempRobot != nullptr) {
+        auto const tempPos = this->matrix->genRandPos();
+        if(!this->isWithinBounds(tempPos.first,tempPos.second)) {
+            assert(false && "Random position generated is out of bounds in robotDequeue battleground");
+        }
+        tempRobot->updateLoc(tempPos);
+        this->matrix->setRobotToList(tempRobot);
+        this->matrix->setRobot(tempPos.first,tempPos.second,tempRobot);
+    }
 }
 
-void BattleGround::deathHandler(size_t const row, size_t const column) const {
-    //Checks if robot should be deleted or queue
 
-    if(matrix->getRobot(row,column) == nullptr) {
-        assert(false && "deathHandler in BG trying to use nullptr");
-    }
-    if(matrix->getRobot(row,column)->getLife() == 0) {
-        this->robotDelete(row,column);
-    }
-    this->robotEnqueue(row,column);
-}
 
 
 void BattleGround::robotInit(int id, string name, size_t const row, size_t const column) {
@@ -162,30 +180,43 @@ void BattleGround::print() {
     matrix->print();
 }
 void BattleGround::robotExecute(size_t const row, size_t const col) {
-    if(getRobot(row,col)==nullptr) assert(false&& "robotExecute accessing nullptr (SUICIDE)");
+    if(getRobot(row,col)==nullptr) assert(false&& "robotExecute accessing nullptr (SUICIDE maybe)");
     matrix->getRobot(row,col)->executeTurn();
 }
 
-void BattleGround::startSimulator() {
+void BattleGround::startCycle() {
     shared_ptr<MainRobot> exetemp;
-    while( (exetemp = matrix->activeList->iterate()) != nullptr && stepCount > 0) {
+    int x = 0;
+    while(stepCount > 0 && !this->matrix->endGame()) {
+        cout << "ITERATION NUMBER : "  << ++x << endl;
+        cout << "ROBOTS ACTIVE : " << this->matrix->activeList->getSize() << endl;
+        exetemp = matrix->activeList->iterate();
+
+        if(getRobot(exetemp->getRowLoc(),exetemp->getColumnLoc())==nullptr) assert(false&& "iterate method in start cycle is accessing nullptr");
+
         this->robotExecute(exetemp->getRowLoc(),exetemp->getColumnLoc());
         this->print();
+        this->robotDequeue();
         this->stepCount--;
+        cout << endl << endl << "ITERATION " << x << " ENDED  " << endl << endl << endl;
     }
 }
 
+void BattleGround::gameHandler() {
+    this->startCycle();
+    cout << "***********" << endl << "GAME ENDED";
+}
 
 
 //   *****************************************************************************
 
 //          ********* MAIN ROBOT CONSTRUCTOR ***********
 
-MainRobot::MainRobot(int id, string name, size_t const row, size_t const column,BattleGround* BGptr) {
+MainRobot::MainRobot(int const id, string name, size_t const row, size_t const column,BattleGround* BGptr) {
     this->name = name;
     this->rowLoc = row;
     this->columnLoc = column;
-    this->id = -1;
+    this->id = id;
     this->BGptr = BGptr;
     cout <<"Construced Main" << endl;
 }

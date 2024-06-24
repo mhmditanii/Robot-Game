@@ -21,6 +21,9 @@ public:
     void executeTurn() override;
     void step() override;
 
+    pair<size_t,size_t> moveLimitFrontGen() const;
+    pair<size_t,size_t> moveLimitBackGen() const;
+
 };
 
 

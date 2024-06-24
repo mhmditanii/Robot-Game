@@ -32,7 +32,7 @@ public:
 
     void decrementLife();
     int getLife() const;
-
+    string getName() const;
 
     //ROBOTS ATTRIBUTE CONTROL
     virtual void executeTurn() = 0; // Every robot will implement this function base on his abilities
@@ -54,6 +54,7 @@ public:
     void printlife();
     bool checkBG(size_t row, size_t column) const;
     bool attack(size_t row, size_t column);
+    void updateLoc(pair<size_t,size_t> const & newLoc);
 };
 
 

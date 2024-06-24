@@ -14,7 +14,7 @@ void Queue::enqueue(shared_ptr<MainRobot> value) {
 
 shared_ptr<MainRobot> Queue::dequeue() {
     if (isEmpty()) {
-        throw out_of_range("Queue is empty");
+        return nullptr;
     }
     shared_ptr<MainRobot> frontValue = Qlist.getHead()->data;
     Qlist.deleteValue(frontValue);

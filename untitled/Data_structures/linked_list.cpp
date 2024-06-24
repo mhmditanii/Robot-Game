@@ -1,6 +1,6 @@
 #include "linked_list.h"
 
-LinkedList::LinkedList() : head(nullptr), size(0) {}
+LinkedList::LinkedList() : head(nullptr), size(0), iterator(nullptr) {}
 
 LinkedList::~LinkedList() {
     if (head == nullptr) return;
@@ -11,23 +11,8 @@ LinkedList::~LinkedList() {
         delete current;
         current = nextNode;
     } while (current != head);
-}
-
-void LinkedList::insertAtBeginning(shared_ptr<MainRobot> value) {
-    Node* newNode = new Node(value);
-    if (head == nullptr) {
-        newNode->next = newNode;
-        head = newNode;
-    } else {
-        Node* current = head;
-        while (current->next != head) {
-            current = current->next;
-        }
-        newNode->next = head;
-        current->next = newNode;
-        head = newNode;
-    }
-    size++; // Increment size
+    head = nullptr;
+    iterator = nullptr;
 }
 
 void LinkedList::insertAtEnd(shared_ptr<MainRobot> value) {
@@ -43,7 +28,10 @@ void LinkedList::insertAtEnd(shared_ptr<MainRobot> value) {
         current->next = newNode;
         newNode->next = head;
     }
-    size++; // Increment size
+    size++;
+    if (iterator == nullptr) {
+        iterator = head; // Initialize iterator if it was nullptr
+    }
 }
 
 void LinkedList::deleteValue(shared_ptr<MainRobot> value) {
@@ -64,6 +52,11 @@ void LinkedList::deleteValue(shared_ptr<MainRobot> value) {
         }
         delete temp;
         size--; // Decrement size
+        if (size == 0) {
+            iterator = nullptr; // Reset iterator if list is empty
+        } else if (iterator == temp) {
+            iterator = head; // Update iterator if it was pointing to the deleted node
+        }
         return;
     }
     Node* current = head;
@@ -71,8 +64,14 @@ void LinkedList::deleteValue(shared_ptr<MainRobot> value) {
         if (current->next->data == value) {
             Node* temp = current->next;
             current->next = temp->next;
+            if (iterator == temp) {
+                iterator = current->next; // Update iterator if it was pointing to the deleted node
+            }
             delete temp;
-            size--; // Decrement size
+            size--;
+            if (size == 0) {
+                iterator = nullptr; // Reset iterator if list is empty
+            }
             return;
         }
         current = current->next;
@@ -85,13 +84,16 @@ int LinkedList::getSize() const {
 
 shared_ptr<MainRobot> LinkedList::iterate() {
     if (head == nullptr) {
-        return nullptr;
+        assert(false && "ITERATOR in linkedlist is returning a nullptr which is absurd");
     }
-    shared_ptr<MainRobot> data = head->data;
-    head = head->next;
+    if (iterator == nullptr) {
+        iterator = head;
+    }
+    shared_ptr<MainRobot> data = iterator->data;
+    iterator = iterator->next;
     return data;
 }
 
-LinkedList::Node *LinkedList::getHead() const {
+LinkedList::Node* LinkedList::getHead() const {
     return this->head;
 }

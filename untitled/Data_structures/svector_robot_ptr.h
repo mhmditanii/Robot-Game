@@ -60,13 +60,17 @@ public:
     bool isInBounds(size_t row,size_t column) const;
     void moveData(size_t curRow, size_t curCol, size_t destRow, size_t destCol);
     void print() const;
-    //Used to delete the robots from the matrix(Battleground)
+    //Used to delete the robots from the matrix(Battleground) and LINKEDLIST
     void deleteData(size_t row, size_t column);
+    //Used to delete the old location robot from the matrix(Battleground) for the sake of moving the robot
+    void deleteForMove(size_t row, size_t column);
 
     void enqueueData(size_t row, size_t column) const;
     shared_ptr<MainRobot> dequeueData() const;
 
     pair<size_t,size_t> genRandPos() const;
+
+    bool endGame() const;
 
 };
 

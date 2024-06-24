@@ -5,7 +5,7 @@
 #ifndef BLUETHUNDER_H
 #define BLUETHUNDER_H
 #include "../robots_h/ShootingRobot.h"
-
+#include"../Data_structures/linked_list.h"
 
 class BlueThunder : public ShootingRobot{
 private:
@@ -18,6 +18,7 @@ public:
     void executeTurn() override;
 
     //Shooting functions to keep each function to do one task
+
     pair<size_t,size_t> getTargetCoordinates(int def = -1) const;
     void updateClockTurn();
     size_t aimUp() const;

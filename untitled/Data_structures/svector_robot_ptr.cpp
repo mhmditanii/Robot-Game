@@ -101,6 +101,12 @@ void svector<shared_ptr<MainRobot>>::deleteData(size_t const row, size_t const c
     robots[temp] = nullptr;
 }
 
+void svector<shared_ptr<MainRobot>>::deleteForMove(size_t const row, size_t const column) {
+    //Deletes from LinkedList before freeing the robot
+    const int temp = static_cast<int>(row * BGcolumns + column);
+    robots[temp] = nullptr;
+}
+
 void svector<shared_ptr<MainRobot> >::enqueueData(size_t const row, size_t const column) const {
     const int temp = static_cast<int>(row * BGcolumns + column);
     waitQueue->enqueue(robots[temp]);
@@ -110,10 +116,8 @@ void svector<shared_ptr<MainRobot> >::enqueueData(size_t const row, size_t const
 }
 
 shared_ptr<MainRobot> svector<shared_ptr<MainRobot> >::dequeueData() const {
-    if(!waitQueue->isEmpty()) {
-        return this->waitQueue->dequeue();
-    }
-    assert(false && "svector is accessing a null Queue");
+    //Checked in the Queue class
+    return this->waitQueue->dequeue();
 }
 
 
@@ -123,8 +127,16 @@ bool svector<shared_ptr<MainRobot>>::isInBounds(size_t const row, size_t const c
 
 void svector<shared_ptr<MainRobot>>::moveData
 (size_t const curRow, size_t const curCol, size_t const destRow, size_t const destCol) {
+    const int temp = static_cast<int>(curRow * BGcolumns + curCol);
+    cout << robots[temp]->getName() << " IS MOVING FROM (" << curRow
+    << "," << curCol << ") TO (" << destRow << "," << destCol << ")" << endl;
     this->setRobot(destRow,destCol,this->getRobot(curRow,curCol));
-    this->deleteData(curRow,curCol);
+    robots[temp]->updateLoc(make_pair(destRow,destCol));
+    this->deleteForMove(curRow,curCol);
+
+    if(getRobot(curRow,curCol) != nullptr || getRobot(destRow,destCol) == nullptr) {
+        assert(false && "moveData in svector has an issue either with deleting the old loc or moving to new loc");
+    }
 }
 
 pair<size_t, size_t> svector<shared_ptr<MainRobot> >::genRandPos() const {
@@ -142,6 +154,11 @@ pair<size_t, size_t> svector<shared_ptr<MainRobot> >::genRandPos() const {
     } while (this->getRobot(row,col) != nullptr);
 
     return make_pair(row, col);
+}
+
+bool svector<shared_ptr<MainRobot>>::endGame() const {
+    //endGame = true -> game should end
+    return (activeList->getSize() == 1 && waitQueue->isEmpty());
 }
 
 void svector<shared_ptr<MainRobot>>::print() const {

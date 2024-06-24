@@ -57,6 +57,9 @@ bool Robocop::shoot() {
         if(target.first==this->getRowLoc() && target.second == this->getColumnLoc()) {
             assert(false && "ROBOCOP IS ATTEMPTING SUICIDE");
         }
+        if(!BGptr->isWithinBounds(target.first,target.second)){
+            assert(false && "SHOOT ROBOCOP SHOOTING OUT OF BOUNDS");
+        }
         this->attack(target.first,target.second);
     }
 
@@ -104,24 +107,24 @@ pair<size_t, size_t> Robocop::fireDecision() const {
     int x, y;
     int rowLoc = static_cast<int>(this->getRowLoc());
     int colLoc = static_cast<int>(this->getColumnLoc());
-
+    int tempX;
+    int tempY;
     // This loop computes the possible target location
     do {
-        int tempX = dis(gen);
-        int tempY = dis(gen);
+        tempX = dis(gen);
+        tempY = dis(gen);
 
-        // Convert to absolute distance from current location
-        x = abs(tempX - rowLoc);
-        y = abs(tempY - colLoc);
+        // Convert to absolute target location from current location
+        x = rowLoc + tempX;
+        y = colLoc + tempY;
 
         // Check if the computed coordinates are not the current location
         // and the sum of distances is within the allowed range
         // and the target location is within bounds
-    } while ((x == rowLoc && y == colLoc) ||     // Prevent targeting current location
-             (x + y > 10) ||                     // Ensure x + y <= 10
+    } while ((tempX == 0 && tempY == 0) ||       // Prevent targeting current location
+             (abs(tempX) + abs(tempY) > 10) ||   // Ensure |tempX| + |tempY| <= 10
              !this->BGptr->isWithinBounds(x, y)); // Check if location is valid
-
-    return make_pair(static_cast<size_t>(x), static_cast<size_t>(y));
+    return std::make_pair(static_cast<size_t>(x), static_cast<size_t>(y));
 }
 
 

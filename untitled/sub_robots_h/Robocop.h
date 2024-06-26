@@ -19,6 +19,10 @@ private:
 public:
     Robocop(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~Robocop() override;
+    //Robocop(const Robocop& other);
+    Robocop(Robocop&&) noexcept;
+    // Robocop& operator=(Robocop&&) noexcept;
+
     void move() override;
     bool look() override;
     bool shoot() override;

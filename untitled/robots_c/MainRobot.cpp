@@ -66,10 +66,26 @@ MainRobot::MainRobot(const MainRobot& other)
 }
 
 MainRobot::MainRobot(MainRobot&& other) noexcept
-        : id(other.id), name(move(other.name)), rowLoc(other.rowLoc), columnLoc(other.columnLoc), BGptr(other.BGptr) {
-    other.BGptr = nullptr;
+        :  name(move(other.name)), rowLoc(other.rowLoc), columnLoc(other.columnLoc), BGptr(other.BGptr)
+           ,lives(other.lives)
+{
+    id = 0;
+    killScore = 0;
     cout << "Move Constructed Main" << endl;
 }
+
+MainRobot &MainRobot::operator=(MainRobot &&other) noexcept {
+    if(this != &other) {
+        name = move(other.name);
+        rowLoc = (other.rowLoc);
+        columnLoc = (other.columnLoc);
+        BGptr = (other.BGptr);
+        killScore = 0;
+        lives = other.lives;
+    }
+    return *this;
+}
+
 
 bool MainRobot::attack(size_t const row,size_t const column) {
     cout << this->name <<" (" << this->rowLoc << "," << this->columnLoc

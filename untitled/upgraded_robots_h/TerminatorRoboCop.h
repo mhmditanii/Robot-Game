@@ -12,6 +12,7 @@ class TerminatorRoboCop : public Robocop, Terminator{
 public:
     TerminatorRoboCop(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~TerminatorRoboCop();
+    TerminatorRoboCop(Robocop&&) noexcept;
     void executeTurn() override;
 
     //Terminator methods

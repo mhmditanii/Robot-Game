@@ -15,3 +15,14 @@ ShootingRobot::~ShootingRobot() {
 ShootingRobot::ShootingRobot(const ShootingRobot &other){
     cout << "Using copy Shooting constructor" << "**************"<< endl << "***********" << endl;
 }
+ShootingRobot::ShootingRobot(ShootingRobot && other) noexcept
+    : MainRobot(std::move(other))
+{
+    cout << "USING SHOOTING ROBOT MOVE CONSTRUCTOR" << endl;
+}
+ShootingRobot &ShootingRobot::operator=(ShootingRobot && other) noexcept{
+    if(this != &other) {
+        MainRobot::operator=(move(other));
+    }
+    return *this;
+}

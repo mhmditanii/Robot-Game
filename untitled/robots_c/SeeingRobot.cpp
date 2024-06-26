@@ -12,3 +12,14 @@ SeeingRobot::SeeingRobot(int id, string name, size_t row, size_t column, BattleG
 SeeingRobot::~SeeingRobot() {
     cout << "deleting seeing" << endl;
 }
+SeeingRobot::SeeingRobot(SeeingRobot &&other) noexcept : MainRobot(std::move(other))
+{
+}
+
+
+SeeingRobot &SeeingRobot::operator=(SeeingRobot && other) noexcept{
+    if(this != &other) {
+        MainRobot::operator=(std::move(other));
+    }
+    return *this;
+}

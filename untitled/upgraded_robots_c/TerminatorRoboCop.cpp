@@ -11,6 +11,12 @@ TerminatorRoboCop::TerminatorRoboCop(int id,string name, size_t row, size_t colu
     cout << "Terminator ROBOCOP id created"<< endl;
 }
 
+TerminatorRoboCop::TerminatorRoboCop(Robocop&& other) noexcept
+    : MainRobot(std::move(other)),Robocop(std::move(other)),Terminator(std::move(other))
+{
+    cout << "UPGRADING TO TERMIANTOR_ROBOCOP USING MOVE OPERATOR" << endl;
+}
+
 TerminatorRoboCop::~TerminatorRoboCop() {
     cout << "Terminator Robocop is deleted" << endl;
 }

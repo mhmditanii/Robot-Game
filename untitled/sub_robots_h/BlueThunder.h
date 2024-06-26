@@ -14,6 +14,9 @@ public:
     BlueThunder(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~BlueThunder() override;
     BlueThunder(const BlueThunder& other);
+    BlueThunder(BlueThunder&&) noexcept;
+    BlueThunder& operator=(BlueThunder&&);
+
     bool shoot() override;
     void executeTurn() override;
 

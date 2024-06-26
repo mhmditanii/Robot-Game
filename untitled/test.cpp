@@ -10,23 +10,47 @@ using namespace std;
 
 
 int main() {
-        BattleGround* bg = new BattleGround(9,9,1000);
-        bg->robotInit(30,"samir",2,2);
-        bg->robotInit(30,"ahmad",4,4);
-        bg->robotInit(30,"mahmoud",5,3);
-        bg->robotInit(30,"yaser",0,0);
-        // bg->robotInit(60,"ahmad",2,0);
-        // bg->robotInit(10,"ahmad",1,5);
-        // bg->robotInit(20,"ahmad",3,3);
-        // bg->robotInit(40,"ahmad",4,4);
-        // bg->robotInit(30,"ahmad",5,0);
-        // bg->robotInit(60,"ahmad",2,5);
-        // bg->robotInit(10,"ahmad",4,1);
-        // cout << "STarting the simulator" << endl;
-        bg->gameHandler();
 
-        cout << endl << "END ********************" << endl;
-        bg->print();
+        BattleGround* bg = new BattleGround(9,9,1000);
+        bg->robotInit(30,"samir",1,1);
+
+        shared_ptr<Terminator> x;
+
+        TerminatorRoboCop y = std::move(*x);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // //bg->robotInit(10,"ahmad",4,4);
+        // shared_ptr<Terminator> x = dynamic_pointer_cast<Terminator>(bg->getRobot(1,1));
+        // // shared_ptr<BlueThunder> blueThunderPtr = dynamic_pointer_cast<BlueThunder>(x);
+        // //
+        // // MadBot y = std::move(*blueThunderPtr);
+        // auto y = std::move(x);
+        // bg->robotKill(1,1);
+        // x.reset();
+        // cout << y->getName() << endl;
+        // //y = nullptr;
+        // //cout << y->getName();
+        //
+        // //y->updateLoc(make_pair(2,2));
+        // //bg->robotKill(0,0);
+        // //x = nullptr;
+        //
+        //
+        // cout << endl << "END ********************" << endl;
+        // bg->print();
 
         return 0;
 }

@@ -12,7 +12,11 @@ private:
 
 public:
     MovingRobot(int id, string name, size_t row, size_t column, BattleGround* BGptr);
-    ~MovingRobot();
+    ~MovingRobot() override;
+    MovingRobot(const MovingRobot& other);
+    MovingRobot(MovingRobot&& other) noexcept;
+    MovingRobot& operator=(MovingRobot&&) noexcept;
+
     void moveUp();
     void moveDown();
     void moveRight();

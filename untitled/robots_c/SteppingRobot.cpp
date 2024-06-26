@@ -12,3 +12,14 @@ SteppingRobot::SteppingRobot(int id, string name, size_t row, size_t column, Bat
 SteppingRobot::~SteppingRobot() {
     cout << "Deleting Stepping robot" << endl;
 }
+
+SteppingRobot::SteppingRobot(SteppingRobot &&other) noexcept : MainRobot(std::move(other))
+{
+}
+
+SteppingRobot &SteppingRobot::operator=(SteppingRobot && other) noexcept{
+    if(this != &other) {
+        MainRobot::operator=(std::move(other));
+    }
+    return *this;
+}

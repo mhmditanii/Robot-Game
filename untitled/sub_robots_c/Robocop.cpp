@@ -19,6 +19,20 @@ Robocop::Robocop(int id, string name, size_t row, size_t column, BattleGround* B
     cout << "Creating Robocop" << endl;
 }
 
+Robocop::Robocop(Robocop&& other) noexcept :
+    MainRobot(std::move(other)), MovingRobot(std::move(other)),SeeingRobot(std::move(other))
+    , ShootingRobot(std::move(other))
+{
+}
+
+// Robocop &Robocop::operator=(Robocop &&other) {
+//     if(this != &other) {
+//
+//     }
+// }
+
+
+
 Robocop::~Robocop() {
     cout << "Deleting Robocop" << endl;
 }

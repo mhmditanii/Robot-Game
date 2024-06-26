@@ -2,7 +2,5 @@ List to do :
 
 1. Add checkings for the blue thunder shoot function in class
     EX: (when robot location is 0,0) it can't shoot upwards or left)
-3. Work on bluethunder shoot diagonally in shootfunction
 4. Do checkings for blue thunder and madbot when they are shooting in edge positions
 5. Add upgraded_robots_c/UltimateRobot.cpp to makefile
-6. upgraded_robots_c/RoboTank.cpp upgraded_robots_c/TerminatorRoboCop.cpp

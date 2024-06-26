@@ -24,7 +24,8 @@ protected:
 
 public:
 
-
+    MainRobot(MainRobot&& other) noexcept;
+    MainRobot& operator=(MainRobot&& other) noexcept;
     //Setters and Getters (DEC , INC included)
     size_t getRowLoc() const;
     size_t getColumnLoc() const;
@@ -49,7 +50,6 @@ public:
     MainRobot(int id,string name, size_t row, size_t column,BattleGround* BGptr);
     virtual ~MainRobot();
     MainRobot(const MainRobot& other);
-    MainRobot(MainRobot&& other) noexcept;
 
     void printlife();
     bool checkBG(size_t row, size_t column) const;

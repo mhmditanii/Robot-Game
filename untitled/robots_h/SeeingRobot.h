@@ -13,6 +13,8 @@ private:
 public:
     SeeingRobot(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~SeeingRobot();
+    SeeingRobot(SeeingRobot&&) noexcept;
+    SeeingRobot& operator=(SeeingRobot&&) noexcept;
     virtual bool look() = 0;
 };
 

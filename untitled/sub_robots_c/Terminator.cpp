@@ -12,6 +12,13 @@ Terminator::Terminator(int const id, string name, size_t row, size_t column, Bat
 {
     cout << "CREATED TERMINATOR" << endl;
 }
+
+Terminator::Terminator(Terminator&& other) noexcept :
+    MainRobot(std::move(other)), MovingRobot(std::move(other)),SeeingRobot(std::move(other))
+    , SteppingRobot(std::move(other))
+{
+}
+
 Terminator::~Terminator() {
     cout << "Delting terminator" << endl;
 }

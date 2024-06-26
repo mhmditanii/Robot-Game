@@ -13,6 +13,22 @@ MovingRobot::~MovingRobot() {
     cout << "deleting moving robot " << endl;
 }
 
+MovingRobot::MovingRobot(const MovingRobot& other) {
+    cout << "USING MOVING ROBOT COPY CONSTRUCTOR" << endl;
+}
+
+MovingRobot::MovingRobot(MovingRobot &&other) noexcept : MainRobot(std::move(other))
+{
+}
+
+
+MovingRobot &MovingRobot::operator=(MovingRobot && other) noexcept{
+    if(this != &other) {
+        MainRobot::operator=(std::move(other));
+    }
+    return *this;
+}
+
 void MovingRobot::moveUp() {}
 void MovingRobot::moveDown() {}
 void MovingRobot::moveLeft() {}

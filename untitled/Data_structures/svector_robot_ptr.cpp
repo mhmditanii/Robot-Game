@@ -98,7 +98,7 @@ void svector<shared_ptr<MainRobot>>::deleteData(size_t const row, size_t const c
     //Deletes from LinkedList before freeing the robot
     const int temp = static_cast<int>(row * BGcolumns + column);
     activeList->deleteValue(robots[temp]);
-    robots[temp] = nullptr;
+    robots[temp].reset();
 }
 
 void svector<shared_ptr<MainRobot>>::deleteForMove(size_t const row, size_t const column) {

@@ -12,6 +12,8 @@ class SteppingRobot : public virtual MainRobot{
 public:
     SteppingRobot(int id,string name, size_t row, size_t column, BattleGround* BGptr);
     ~SteppingRobot() override;
+    SteppingRobot(SteppingRobot&&) noexcept;
+    SteppingRobot& operator=(SteppingRobot&&) noexcept;
 
     virtual void step() = 0;
 };

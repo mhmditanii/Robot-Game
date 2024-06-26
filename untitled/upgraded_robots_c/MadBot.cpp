@@ -17,6 +17,20 @@ MadBot::~MadBot() {
     cout <<"Deleting MadBot" << endl;
 }
 
+MadBot::MadBot(BlueThunder &&other) noexcept
+    : MainRobot(std::move(other)),BlueThunder(std::move(other))
+{
+    cout << "UPGRADING TO MADBOT USING MOVE OPERATOR"<<endl;
+}
+
+// MadBot &MadBot::operator=(MadBot &&other) {
+//     if(this != &other) {
+//
+//     }
+// }
+
+
+
 bool MadBot::shoot() {
     const int random = dis(gen);
     auto[x,y] = this->getTargetCoordinates(random);
@@ -26,3 +40,5 @@ bool MadBot::shoot() {
 void MadBot::executeTurn() {
     this->shoot();
 }
+
+

@@ -20,8 +20,16 @@ BlueThunder::BlueThunder(const BlueThunder &other) : MainRobot(other),ShootingRo
     cout << "Using copy constructor" << "**************"<< endl << "***********" << endl;
 }
 
+BlueThunder::BlueThunder(BlueThunder &&other) noexcept
+    : MainRobot(move(other)),ShootingRobot(move(other))
+{
+    clockTurn = 1;
+    cout << "USING BLUETHUNDER MOVE CONSTRUCTOR" << endl;
+}
+
+
 bool BlueThunder::shoot() {
-    const pair<size_t, size_t> target = this->getTargetCoordinates();
+    const auto target = this->getTargetCoordinates();
     updateClockTurn();
     return this->attack(target.first, target.second);
 }
@@ -36,7 +44,7 @@ void BlueThunder::executeTurn() {
 //Created to improve the readablity of the shooting function
 pair<size_t, size_t> BlueThunder::getTargetCoordinates(int def) const {
     // Checks if there was an argument passed as a direction to shoot
-    // else uses clockTurn, Used for MADBOT
+    // else uses clockTurn, !!!!def is Used for MADBOT!!!!
     const int decision = (def != -1) ? def : this->clockTurn;
 
     switch(decision) {
@@ -58,7 +66,7 @@ pair<size_t, size_t> BlueThunder::getTargetCoordinates(int def) const {
             return aimUpLeft();
         default: {
             assert(false && "BLUE THUNDER SHOOT / ERROR AIMING");
-            return {0, 0}; // not reachable (compiler issues)
+            return {0, 0}; // not reachable (supress compiler issues)
         }
     }
 }

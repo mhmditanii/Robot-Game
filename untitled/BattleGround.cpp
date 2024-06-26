@@ -83,6 +83,8 @@ void BattleGround::robotKill(size_t const row, size_t const column) const {
 void BattleGround::deathHandler(size_t const row, size_t const column) const {
     //Checks if robot should be deleted or queue
     auto temp = matrix->getRobot(row,column);
+    temp->decrementLife();
+
     if(matrix->getRobot(row,column) == nullptr) {
         assert(false && "deathHandler in BG trying to use nullptr");
     }
@@ -91,8 +93,7 @@ void BattleGround::deathHandler(size_t const row, size_t const column) const {
         this->robotKill(row,column);
         return;
     }
-    temp->decrementLife();
-    this->robotEnqueue(row,column);
+    //this->robotEnqueue(row,column);
 }
 
 void BattleGround::robotEnqueue(size_t const row, size_t const column) const {

@@ -38,9 +38,9 @@ public:
     [[nodiscard]]optional<pair<size_t,size_t>> getVision(size_t row,size_t column,int scope) const;
     [[nodiscard]]shared_ptr<MainRobot> getRobot(size_t row,size_t column) const;
     pair<size_t,size_t> getMatrixBounds() const;
-
+    pair<size_t,size_t> getRandomPosition() const;
     // ROBOT Handling
-    void robotInit(int id, string name, size_t row,size_t column);
+    void robotInit(int id, string name, size_t row,size_t column,bool random);
     void moveRobot(size_t curRow, size_t curCol, size_t destRow, size_t destCol);
     void robotEnqueue(size_t row, size_t column) const;
     void robotDequeue() const;
@@ -58,6 +58,8 @@ public:
     void robotExecute(size_t row, size_t col); // will automate it later used for testing
     void startCycle();
     void gameHandler();
+    shared_ptr<MainRobot> upgradePointerParcing(shared_ptr<MainRobot>) const;
+    void upgradeFinal(pair<size_t,size_t>, shared_ptr<MainRobot>) const;
 };
 
 

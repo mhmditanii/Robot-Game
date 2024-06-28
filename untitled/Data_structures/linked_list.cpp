@@ -91,6 +91,9 @@ shared_ptr<MainRobot> LinkedList::iterate() {
     }
     shared_ptr<MainRobot> data = iterator->data;
     iterator = iterator->next;
+    if(data == nullptr) {
+        assert(false && "ITERATOR is returning nullptr which is absurd");
+    }
     return data;
 }
 

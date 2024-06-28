@@ -6,6 +6,8 @@
 
 #include <memory>
 
+#include "../BattleGround.h"
+
 BlueThunder::BlueThunder(int id, string name, size_t row, size_t column, BattleGround* BGptr)
     :   MainRobot(id,name,row,column,BGptr), ShootingRobot(id,name,row,column,BGptr)
 {
@@ -29,8 +31,13 @@ BlueThunder::BlueThunder(BlueThunder &&other) noexcept
 
 
 bool BlueThunder::shoot() {
-    const auto target = this->getTargetCoordinates();
-    updateClockTurn();
+    pair<size_t,size_t> target;
+    //Loop in order not to shoot out of bounds on edge cases
+    do {
+        target =this->getTargetCoordinates();
+        updateClockTurn();
+    }while(!BGptr->isWithinBounds(target.first,target.second));
+
     return this->attack(target.first, target.second);
 }
 
@@ -47,28 +54,28 @@ pair<size_t, size_t> BlueThunder::getTargetCoordinates(int def) const {
     // else uses clockTurn, !!!!def is Used for MADBOT!!!!
     const int decision = (def != -1) ? def : this->clockTurn;
 
-    switch(decision) {
-        case 1:
-            return {aimUp(), getColumnLoc()};
-        case 2:
-            return aimUpRight();
-        case 3:
-            return {getRowLoc(), aimRight()};
-        case 4:
-            return aimDownRight();
-        case 5:
-            return {aimDown(), getColumnLoc()};
-        case 6:
-            return aimDownLeft();
-        case 7:
-            return {getRowLoc(), aimLeft()};
-        case 8:
-            return aimUpLeft();
-        default: {
-            assert(false && "BLUE THUNDER SHOOT / ERROR AIMING");
-            return {0, 0}; // not reachable (supress compiler issues)
+        switch(decision) {
+            case 1:
+                return {aimUp(), getColumnLoc()};
+            case 2:
+                return aimUpRight();
+            case 3:
+                return {getRowLoc(), aimRight()};
+            case 4:
+                return aimDownRight();
+            case 5:
+                return {aimDown(), getColumnLoc()};
+            case 6:
+                return aimDownLeft();
+            case 7:
+                return {getRowLoc(), aimLeft()};
+            case 8:
+                return aimUpLeft();
+            default: {
+                assert(false && "BLUE THUNDER SHOOT / ERROR AIMING");
+                return {0, 0}; // not reachable (supress compiler issues)
+            }
         }
-    }
 }
 
 void BlueThunder::updateClockTurn() {

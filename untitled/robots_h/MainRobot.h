@@ -30,10 +30,12 @@ public:
     size_t getRowLoc() const;
     size_t getColumnLoc() const;
     void setLoc(size_t row, size_t col); // Set the loc in one go no need for 2 setters
+    BattleGround* getBGptr() const;
 
     void decrementLife();
     int getLife() const;
     string getName() const;
+    int getId() const;
 
     //ROBOTS ATTRIBUTE CONTROL
     virtual void executeTurn() = 0; // Every robot will implement this function base on his abilities
@@ -43,7 +45,7 @@ public:
 
 
     void incKillScore();
-    void upgradeRobot();
+    bool checkForUpgrade() const;
 
 
     //TESTING

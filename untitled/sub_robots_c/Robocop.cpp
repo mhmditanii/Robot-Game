@@ -37,12 +37,22 @@ Robocop::~Robocop() {
     cout << "Deleting Robocop" << endl;
 }
 void Robocop::executeTurn() {
-    this->look();
-    this->move();
+    if(this->look()) {
+        this->move();
+    }
+    else {
+        cout << this->getName() << " WILL NOT MOVE (NO EMPTY SPACE)" << endl;
+    }
     this->shoot();
 }
 bool Robocop::look() {
+    //i used in case there is no free space for robocop to move
+    int i = 0;
     do {
+        i++;
+        if(i > 50) {
+            return false;
+        }
         temp = this->decisionMaker(true);
         // Check if the proposed move is within bounds
         if (!BGptr->isWithinBounds(temp.first, temp.second)) {
@@ -54,7 +64,6 @@ bool Robocop::look() {
             break;
         }
     } while (true); // Continue looping until a valid move is found
-
     return true;    //Doesn't matter what the function returns here
 }
 

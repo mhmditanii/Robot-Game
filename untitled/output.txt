@@ -1,0 +1,960 @@
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+MOVING ROBOT USING MAIN
+SEEING ROBOT USING MAIN
+Stepping robot calling main
+CREATED TERMINATOR
+ITERATION NUMBER : 1
+ROBOTS ACTIVE : 15
+
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+Diana
+ATTACKING USING STEP FUNCTION
+Diana (3,3) IS ATTACKING LOCATION (2,2)
+Diana KILLED A ROBOT
+Charlie IS BEING ADDED TO THE QUEUE
+Diana IS MOVING FROM (3,3) TO (2,2)
+
+AFTER EXECUTING
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+
+ITERATION 1 ENDED  
+
+
+ITERATION NUMBER : 2
+Charlie IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+Alice
+ATTACKING USING STEP FUNCTION
+Alice (0,0) IS ATTACKING LOCATION (1,1)
+Alice KILLED A ROBOT
+Bob IS BEING ADDED TO THE QUEUE
+Alice IS MOVING FROM (0,0) TO (1,1)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+
+ITERATION 2 ENDED  
+
+
+ITERATION NUMBER : 3
+Bob IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+Diana
+ATTACKING USING STEP FUNCTION
+Diana (2,2) IS ATTACKING LOCATION (1,1)
+Diana KILLED A ROBOT
+Alice IS BEING ADDED TO THE QUEUE
+Diana IS MOVING FROM (2,2) TO (1,1)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+
+ITERATION 3 ENDED  
+
+
+ITERATION NUMBER : 4
+Alice IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+Eve
+ATTACKING USING STEP FUNCTION
+Eve (4,4) IS ATTACKING LOCATION (5,5)
+Eve KILLED A ROBOT
+Frank IS BEING ADDED TO THE QUEUE
+Eve IS MOVING FROM (4,4) TO (5,5)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+
+ITERATION 4 ENDED  
+
+
+ITERATION NUMBER : 5
+Frank IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+Grace
+ATTACKING USING STEP FUNCTION
+Grace (6,6) IS ATTACKING LOCATION (5,5)
+Grace KILLED A ROBOT
+Eve IS BEING ADDED TO THE QUEUE
+Grace IS MOVING FROM (6,6) TO (5,5)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+
+ITERATION 5 ENDED  
+
+
+ITERATION NUMBER : 6
+Eve IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+Hannah
+ATTACKING USING STEP FUNCTION
+Hannah (7,7) IS ATTACKING LOCATION (7,8)
+Hannah KILLED A ROBOT
+Charlie IS BEING ADDED TO THE QUEUE
+Hannah IS MOVING FROM (7,7) TO (7,8)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+
+ITERATION 6 ENDED  
+
+
+ITERATION NUMBER : 7
+Charlie IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+Ian
+ATTACKING USING STEP FUNCTION
+Ian (8,8) IS ATTACKING LOCATION (7,8)
+Ian KILLED A ROBOT
+Hannah IS BEING ADDED TO THE QUEUE
+Ian IS MOVING FROM (8,8) TO (7,8)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+
+ITERATION 7 ENDED  
+
+
+ITERATION NUMBER : 8
+Hannah IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+1 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 
+
+Julia
+Julia IS MOVING FROM (9,9) TO (6,6)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+1 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 8 ENDED  
+
+
+ITERATION NUMBER : 9
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 
+1 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Kevin
+ATTACKING USING STEP FUNCTION
+Kevin (0,9) IS ATTACKING LOCATION (1,8)
+Kevin KILLED A ROBOT
+Lily IS BEING ADDED TO THE QUEUE
+Kevin IS MOVING FROM (0,9) TO (1,8)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+1 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 9 ENDED  
+
+
+ITERATION NUMBER : 10
+Lily IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+1 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Michael
+ATTACKING USING STEP FUNCTION
+Michael (2,7) IS ATTACKING LOCATION (1,6)
+Michael KILLED A ROBOT
+Eve IS BEING ADDED TO THE QUEUE
+Michael IS MOVING FROM (2,7) TO (1,6)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+1 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 10 ENDED  
+
+
+ITERATION NUMBER : 11
+Eve IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+1 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Nora
+Nora IS MOVING FROM (3,6) TO (1,4)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 11 ENDED  
+
+
+ITERATION NUMBER : 12
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Bob
+ATTACKING USING STEP FUNCTION
+Bob (0,7) IS ATTACKING LOCATION (1,6)
+Bob KILLED A ROBOT
+Michael IS BEING ADDED TO THE QUEUE
+Bob IS MOVING FROM (0,7) TO (1,6)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 12 ENDED  
+
+
+ITERATION NUMBER : 13
+Michael IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Alice
+ATTACKING USING STEP FUNCTION
+Alice (2,3) IS ATTACKING LOCATION (1,4)
+Alice KILLED A ROBOT
+Nora IS BEING ADDED TO THE QUEUE
+Alice IS MOVING FROM (2,3) TO (1,4)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 13 ENDED  
+
+
+ITERATION NUMBER : 14
+Nora IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Frank
+Frank IS MOVING FROM (7,0) TO (6,3)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 14 ENDED  
+
+
+ITERATION NUMBER : 15
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 1 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Charlie
+ATTACKING USING STEP FUNCTION
+Charlie (5,7) IS ATTACKING LOCATION (6,6)
+Charlie KILLED A ROBOT
+Julia IS BEING ADDED TO THE QUEUE
+Charlie IS MOVING FROM (5,7) TO (6,6)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 15 ENDED  
+
+
+ITERATION NUMBER : 16
+Julia IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+1 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Hannah
+ATTACKING USING STEP FUNCTION
+Hannah (1,0) IS ATTACKING LOCATION (1,1)
+Hannah KILLED A ROBOT
+Diana IS BEING ADDED TO THE QUEUE
+Hannah IS MOVING FROM (1,0) TO (1,1)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 16 ENDED  
+
+
+ITERATION NUMBER : 17
+Diana IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Lily
+Lily IS MOVING FROM (8,3) TO (7,5)
+
+AFTER EXECUTING
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 17 ENDED  
+
+
+ITERATION NUMBER : 18
+ROBOTS ACTIVE : 15
+
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Eve
+Eve IS MOVING FROM (4,1) TO (2,1)
+
+AFTER EXECUTING
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 18 ENDED  
+
+
+ITERATION NUMBER : 19
+ROBOTS ACTIVE : 15
+
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Michael
+ATTACKING USING STEP FUNCTION
+Michael (2,6) IS ATTACKING LOCATION (1,6)
+Michael KILLED A ROBOT
+Bob IS BEING ADDED TO THE QUEUE
+Michael IS MOVING FROM (2,6) TO (1,6)
+
+AFTER EXECUTING
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 19 ENDED  
+
+
+ITERATION NUMBER : 20
+Bob IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 1 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Nora
+Nora IS MOVING FROM (3,4) TO (5,2)
+
+AFTER EXECUTING
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 1 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 20 ENDED  
+
+
+ITERATION NUMBER : 21
+ROBOTS ACTIVE : 15
+
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 1 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Julia
+ATTACKING USING STEP FUNCTION
+Julia (4,6) IS ATTACKING LOCATION (5,5)
+Julia KILLED A ROBOT
+Grace IS BEING ADDED TO THE QUEUE
+Julia IS MOVING FROM (4,6) TO (5,5)
+
+AFTER EXECUTING
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 1 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 21 ENDED  
+
+
+ITERATION NUMBER : 22
+Grace IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 1 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Diana
+ATTACKING USING STEP FUNCTION
+Diana (0,1) IS ATTACKING LOCATION (1,1)
+Diana KILLED A ROBOT
+Hannah IS BEING ADDED TO THE QUEUE
+Diana IS MOVING FROM (0,1) TO (1,1)
+
+AFTER EXECUTING
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 1 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 22 ENDED  
+
+
+ITERATION NUMBER : 23
+Hannah IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 15
+
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 1 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Bob
+ATTACKING USING STEP FUNCTION
+Bob (1,2) IS ATTACKING LOCATION (0,2)
+Bob KILLED A ROBOT
+Hannah IS GOING TO BE REMOVED FROM THE GAME 
+Delting terminator
+Deleting Stepping robot
+deleting seeing
+deleting moving robot 
+Main robot deleted 
+Bob IS MOVING FROM (1,2) TO (0,2)
+
+AFTER EXECUTING
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 23 ENDED  
+
+
+ITERATION NUMBER : 24
+ROBOTS ACTIVE : 14
+
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+Grace
+ATTACKING USING STEP FUNCTION
+Grace (4,4) IS ATTACKING LOCATION (5,5)
+Grace KILLED A ROBOT
+Julia IS BEING ADDED TO THE QUEUE
+Grace IS MOVING FROM (4,4) TO (5,5)
+
+AFTER EXECUTING
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+
+
+ITERATION 24 ENDED  
+
+
+ITERATION NUMBER : 25
+Julia IS GOING BACK IN THE GAME
+ROBOTS ACTIVE : 14
+
+0 : 0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 1 : 0 : 0 : 1 : 0 : 1 : 0 : 1 : 0 : 
+0 : 1 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 1 : 0 : 0 : 1 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 1 : 0 : 0 : 1 : 1 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 1 : 0 : 0 : 1 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 
+

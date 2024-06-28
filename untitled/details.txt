@@ -1,0 +1,23 @@
+M by N : 10 10
+steps: 1000
+robots: 20
+RoboCop Kidd random random
+RoboCop Jet random ranodm
+RoboCop Alpha random random
+RoboCop Beta random random
+RoboCop Star random random
+RoboCop Kidd random random
+RoboCop Jet random ranodm
+RoboCop Alpha random random
+RoboCop Beta random random
+RoboCop Star random random
+RoboCop Kidd random random
+RoboCop Jet random ranodm
+RoboCop Alpha random random
+RoboCop Beta random random
+RoboCop Star random random
+RoboCop Kidd random random
+RoboCop Jet random ranodm
+RoboCop Alpha random random
+RoboCop Beta random random
+RoboCop Star random random

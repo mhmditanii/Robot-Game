@@ -8,8 +8,8 @@
 
 
 
-void MainRobot::upgradeRobot() {
-
+bool MainRobot::checkForUpgrade() const{
+    return killScore >= 3;
 }
 
 //                ***********SETTERS AND GETTERS*******************
@@ -22,6 +22,11 @@ size_t MainRobot::getColumnLoc() const {
     return columnLoc;
 }
 
+BattleGround *MainRobot::getBGptr() const {
+    return this->BGptr;
+}
+
+
 void MainRobot::setLoc(size_t const row,size_t const col) {
     rowLoc = row;
     columnLoc = col;
@@ -33,6 +38,11 @@ void MainRobot::decrementLife() {
 
 int MainRobot::getLife() const {
     return this->lives;
+}
+
+
+int MainRobot::getId() const {
+    return this->id;
 }
 
 

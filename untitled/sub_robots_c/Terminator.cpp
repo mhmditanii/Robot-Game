@@ -58,15 +58,14 @@ void Terminator::move() {
 
     //Looping to find a valid destination
     do {
-        //making sure the move is 3 tiles
-        do {
-            resX = XGen(gen);
-            resY = YGen(gen);
-            cout << resX << "    " << resY << endl;
-        }while(abs(static_cast<int>(resX) - static_cast<int>(resY)) > 3);
-    //No need to check if it is occupied because it will use step if any robot is in scope
-    }while((resX == getRowLoc() && resY == getColumnLoc())
-           || (BGptr->getRobot(resX,resY)!= nullptr));
+        // Generate random coordinates
+        resX = XGen(gen);
+        resY = YGen(gen);
+        cout << resX << "  " << resY << endl;
+    } while(abs(static_cast<int>(resX) - static_cast<int>(getRowLoc())) > 3
+            || abs(static_cast<int>(resY) - static_cast<int>(getColumnLoc())) > 3
+            || (resX == getRowLoc() && resY == getColumnLoc())
+            || (BGptr->getRobot(resX, resY) != nullptr));
 
     BGptr->moveRobot(getRowLoc(),getColumnLoc(),resX,resY);
 }
@@ -77,7 +76,6 @@ void Terminator::executeTurn(){
         this->step();
     }
     else {
-        cout << "MOVING" << endl;
         this->move();
     }
 }

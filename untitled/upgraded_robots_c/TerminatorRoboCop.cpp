@@ -12,7 +12,15 @@ TerminatorRoboCop::TerminatorRoboCop(int id,string name, size_t row, size_t colu
 }
 
 TerminatorRoboCop::TerminatorRoboCop(Robocop&& other) noexcept
-    : MainRobot(std::move(other)),Robocop(std::move(other)),Terminator(std::move(other))
+    : MainRobot(std::move(other)),Robocop(std::move(other))
+    ,Terminator(60,other.getName(),other.getRowLoc(),other.getColumnLoc(),other.getBGptr())
+{
+    cout << "UPGRADING TO TERMIANTOR_ROBOCOP USING MOVE OPERATOR" << endl;
+}
+
+TerminatorRoboCop::TerminatorRoboCop(Terminator&& other) noexcept
+    : MainRobot(std::move(other)),Robocop(60,other.getName(),other.getRowLoc(),other.getColumnLoc(),other.getBGptr())
+    ,Terminator(std::move(other))
 {
     cout << "UPGRADING TO TERMIANTOR_ROBOCOP USING MOVE OPERATOR" << endl;
 }

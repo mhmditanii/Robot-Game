@@ -4,3 +4,6 @@ List to do :
     EX: (when robot location is 0,0) it can't shoot upwards or left)
 4. Do checkings for blue thunder and madbot when they are shooting in edge positions
 5. Add upgraded_robots_c/UltimateRobot.cpp to makefile
+7. Terminator causes infinte loops sometimes
+
+./GameExe > output.txt

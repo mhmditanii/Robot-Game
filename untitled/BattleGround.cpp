@@ -65,6 +65,10 @@ pair<size_t, size_t> BattleGround::getMatrixBounds() const {
     return make_pair(this->matrix->getRows(),this->matrix->getColumns());
 }
 
+pair<size_t, size_t> BattleGround::getRandomPosition() const {
+    return this->matrix->genRandPos();
+}
+
 
 //     ************************************************************************
 
@@ -93,7 +97,8 @@ void BattleGround::deathHandler(size_t const row, size_t const column) const {
         this->robotKill(row,column);
         return;
     }
-    //this->robotEnqueue(row,column);
+    cout << temp->getName() << " IS BEING ADDED TO THE QUEUE"<<endl;
+    this->robotEnqueue(row,column);
 }
 
 void BattleGround::robotEnqueue(size_t const row, size_t const column) const {
@@ -112,13 +117,14 @@ void BattleGround::robotDequeue() const {
         tempRobot->updateLoc(tempPos);
         this->matrix->setRobotToList(tempRobot);
         this->matrix->setRobot(tempPos.first,tempPos.second,tempRobot);
+        cout << tempRobot->getName() << " IS GOING BACK IN THE GAME"<<endl;
     }
 }
 
 
 
 
-void BattleGround::robotInit(int id, string name, size_t const row, size_t const column) {
+void BattleGround::robotInit(int id, string name, size_t const row, size_t const column,bool random) {
     switch(id) {
         case 10: {
             const auto temp1 = make_shared<BlueThunder>(id,name,row,column,this);
@@ -190,14 +196,28 @@ void BattleGround::startCycle() {
     int x = 0;
     while(stepCount > 0 && !this->matrix->endGame()) {
         cout << "ITERATION NUMBER : "  << ++x << endl;
+        this->robotDequeue();
         cout << "ROBOTS ACTIVE : " << this->matrix->activeList->getSize() << endl;
-        exetemp = matrix->activeList->iterate();
+        cout << endl;
+        this->print();
+        cout << endl;
 
+        exetemp = matrix->activeList->iterate();
+        if(exetemp == nullptr){assert(false && "Iterator returning nullptr");}
         if(getRobot(exetemp->getRowLoc(),exetemp->getColumnLoc())==nullptr) assert(false&& "iterate method in start cycle is accessing nullptr");
 
         this->robotExecute(exetemp->getRowLoc(),exetemp->getColumnLoc());
+
+        //Handles upgrading of the robot
+        // if(exetemp->checkForUpgrade() && exetemp->getId()!= 0) {
+        //     const pair<size_t,size_t> temploc = make_pair(exetemp->getRowLoc(),exetemp->getColumnLoc());
+        //     shared_ptr<MainRobot> upgradedVersion = this->upgradePointerParcing(exetemp);
+        //     this->upgradeFinal(temploc,upgradedVersion);
+        // }
+
+        cout <<endl<< "AFTER EXECUTING" << endl;
         this->print();
-        this->robotDequeue();
+
         this->stepCount--;
         cout << endl << endl << "ITERATION " << x << " ENDED  " << endl << endl << endl;
     }
@@ -206,6 +226,58 @@ void BattleGround::startCycle() {
 void BattleGround::gameHandler() {
     this->startCycle();
     cout << "***********" << endl << "GAME ENDED";
+}
+
+shared_ptr<MainRobot> BattleGround::upgradePointerParcing(shared_ptr<MainRobot> robot) const {
+    const int idUpdate = robot->getId();
+    switch(idUpdate) {
+        case 10: {
+            auto temp = dynamic_pointer_cast<BlueThunder>(robot);
+            if(!temp){assert(false && "WRONG CASTING IN upgradePointerParcing");}
+            const auto y = make_shared<MadBot>(std::move(*temp));
+            return dynamic_pointer_cast<MainRobot>(y);
+        }
+        case 20: {
+            auto temp = dynamic_pointer_cast<Robocop>(robot);
+            if(!temp){assert(false && "WRONG CASTING IN upgradePointerParcing");}
+            const auto y = make_shared<TerminatorRoboCop>(std::move(*temp));
+            return dynamic_pointer_cast<MainRobot>(y);
+        }
+        case 30: {
+            auto temp = dynamic_pointer_cast<Terminator>(robot);
+            if(!temp){assert(false && "WRONG CASTING IN upgradePointerParcing");}
+            const auto y = make_shared<TerminatorRoboCop>(std::move(*temp));
+            return dynamic_pointer_cast<MainRobot>(y);
+        }
+        case 40: {
+            auto temp = dynamic_pointer_cast<BlueThunder>(robot);
+            if(!temp){assert(false && "WRONG CASTING IN upgradePointerParcing");}
+            const auto y = make_shared<RoboTank>(std::move(*temp));
+            return dynamic_pointer_cast<MainRobot>(y);
+        }
+        case 50: {
+            assert(false&&"NOT IMPLEMENTED YET");
+            return nullptr;
+        }
+        case 60: {
+            assert(false&&"NOT IMPLEMENTED YET");
+            return nullptr;
+        }
+        default: {
+            assert(false&&"FAILED TO UPGRADEPOINTERPARCING check id ");
+            return nullptr;
+        }
+    }
+}
+
+void BattleGround::upgradeFinal(pair<size_t,size_t> oldRobot, shared_ptr<MainRobot> upgraded) const {
+    //remove old robot and then add the new upgraded version in same position
+    this->robotKill(oldRobot.first,oldRobot.second);
+    if(this->getRobot(oldRobot.first,oldRobot.second) != nullptr) {
+        assert(false && "In upgrade final old version is not being deleted properly");
+    }
+    this->matrix->setRobot(oldRobot.first,oldRobot.second,upgraded);
+    this->matrix->setRobotToList(upgraded);
 }
 
 
@@ -219,6 +291,5 @@ MainRobot::MainRobot(int const id, string name, size_t const row, size_t const c
     this->columnLoc = column;
     this->id = id;
     this->BGptr = BGptr;
-    cout <<"Construced Main" << endl;
 }
 

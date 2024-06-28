@@ -12,7 +12,7 @@ MainRobot(id,name,row,column,BGptr), BlueThunder(id,name,row,column,BGptr)
 cout << "RoboTank created" << endl;
 }
 
-RoboTank::RoboTank(RoboTank &&other) noexcept
+RoboTank::RoboTank(BlueThunder &&other) noexcept
     : MainRobot(std::move(other)),BlueThunder(std::move(other))
 {
     cout << "UPGRADING TO ROBOTANK USING MOVE OPERATOR" << endl;

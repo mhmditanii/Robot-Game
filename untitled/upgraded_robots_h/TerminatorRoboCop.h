@@ -14,6 +14,7 @@ public:
     ~TerminatorRoboCop() override;
     TerminatorRoboCop(Robocop&&) noexcept;
     TerminatorRoboCop(Terminator&&) noexcept;
+    TerminatorRoboCop(TerminatorRoboCop&&) noexcept;
     void executeTurn() override;
 
     //Terminator methods

@@ -1,1 +1,1 @@
-
+./GameExe > output.txt

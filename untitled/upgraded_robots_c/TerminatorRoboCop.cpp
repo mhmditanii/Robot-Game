@@ -11,6 +11,11 @@ TerminatorRoboCop::TerminatorRoboCop(int id,string name, size_t row, size_t colu
     cout << "Terminator ROBOCOP id created"<< endl;
 }
 
+TerminatorRoboCop::TerminatorRoboCop(TerminatorRoboCop&& other)noexcept
+    : MainRobot(std::move(other)),Robocop(std::move(other)),Terminator(std::move(other))
+{
+}
+
 TerminatorRoboCop::TerminatorRoboCop(Robocop&& other) noexcept
     : MainRobot(std::move(other)),Robocop(std::move(other))
     ,Terminator(60,other.getName(),other.getRowLoc(),other.getColumnLoc(),other.getBGptr())

@@ -31,7 +31,7 @@ public:
     size_t getColumnLoc() const;
     void setLoc(size_t row, size_t col); // Set the loc in one go no need for 2 setters
     BattleGround* getBGptr() const;
-
+    void setID(int id);
     void decrementLife();
     int getLife() const;
     string getName() const;

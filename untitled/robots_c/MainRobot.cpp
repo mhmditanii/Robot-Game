@@ -9,7 +9,7 @@
 
 
 bool MainRobot::checkForUpgrade() const{
-    return killScore >= 3;
+    return killScore >= 3 && id != 70;
 }
 
 //                ***********SETTERS AND GETTERS*******************
@@ -24,6 +24,10 @@ size_t MainRobot::getColumnLoc() const {
 
 BattleGround *MainRobot::getBGptr() const {
     return this->BGptr;
+}
+
+void MainRobot::setID(int const id) {
+    this->id = id;
 }
 
 

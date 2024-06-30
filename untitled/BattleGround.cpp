@@ -4,6 +4,8 @@
 
 #include "BattleGround.h"
 
+#include "upgraded_robots_h/UltimateRobot.h"
+
 
 BattleGround::BattleGround(size_t const x, size_t const y ,int const stepcount)
     :stepCount(stepcount)
@@ -209,11 +211,11 @@ void BattleGround::startCycle() {
         this->robotExecute(exetemp->getRowLoc(),exetemp->getColumnLoc());
 
         //Handles upgrading of the robot
-        // if(exetemp->checkForUpgrade() && exetemp->getId()!= 0) {
-        //     const pair<size_t,size_t> temploc = make_pair(exetemp->getRowLoc(),exetemp->getColumnLoc());
-        //     shared_ptr<MainRobot> upgradedVersion = this->upgradePointerParcing(exetemp);
-        //     this->upgradeFinal(temploc,upgradedVersion);
-        // }
+        if(exetemp->checkForUpgrade() && exetemp->getId()!= 0) {
+            const pair<size_t,size_t> temploc = make_pair(exetemp->getRowLoc(),exetemp->getColumnLoc());
+            shared_ptr<MainRobot> upgradedVersion = this->upgradePointerParcing(exetemp);
+            this->upgradeFinal(temploc,upgradedVersion);
+        }
 
         cout <<endl<< "AFTER EXECUTING" << endl;
         this->print();
@@ -256,12 +258,16 @@ shared_ptr<MainRobot> BattleGround::upgradePointerParcing(shared_ptr<MainRobot> 
             return dynamic_pointer_cast<MainRobot>(y);
         }
         case 50: {
-            assert(false&&"NOT IMPLEMENTED YET");
-            return nullptr;
+            auto temp = dynamic_pointer_cast<RoboTank>(robot);
+            if(!temp){assert(false && "WRONG CASTING IN upgradePointerParcing");}
+            const auto y = make_shared<UltimateRobot>(std::move(*temp));
+            return dynamic_pointer_cast<MainRobot>(y);
         }
         case 60: {
-            assert(false&&"NOT IMPLEMENTED YET");
-            return nullptr;
+            auto temp = dynamic_pointer_cast<TerminatorRoboCop>(robot);
+            if(!temp){assert(false && "WRONG CASTING IN upgradePointerParcing");}
+            const auto y = make_shared<UltimateRobot>(std::move(*temp));
+            return dynamic_pointer_cast<MainRobot>(y);
         }
         default: {
             assert(false&&"FAILED TO UPGRADEPOINTERPARCING check id ");
